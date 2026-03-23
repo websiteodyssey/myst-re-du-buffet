@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifs &mdash; Le Myst&egrave;re du Buffet</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/icon-192.png">
+  <link rel="apple-touch-icon" href="../assets/images/icon-192.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Tarifs — Le Mystère du Buffet">
+  <meta property="og:description" content="Tarifs buffet à volonté. Adultes dès 20€, enfants 3-6 ans dès 8€, enfants 7-11 ans dès 12€. Soissons.">
+  <meta property="og:url" content="https://lemysteredubuffet.com/pages/tarifs.html">
+  <meta property="og:image" content="https://lemysteredubuffet.com/assets/images/restaurant.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Le Mystère du Buffet">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tarifs — Le Mystère du Buffet">
+  <meta name="twitter:description" content="Tarifs buffet à volonté. Adultes dès 20€, enfants 3-6 ans dès 8€, enfants 7-11 ans dès 12€. Soissons.">
+  <meta name="twitter:image" content="https://lemysteredubuffet.com/assets/images/restaurant.jpg">
+  <!-- Schema.org Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Le Mystère du Buffet",
+    "description": "Restaurant buffet à volonté à Soissons. Entrées, plats et desserts illimités.",
+    "url": "https://lemysteredubuffet.com",
+    "telephone": "+33323741378",
+    "email": "lijiani0104@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Rue Jacques Brel",
+      "addressLocality": "Soissons",
+      "postalCode": "02200",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.3815,
+      "longitude": 3.3223
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "12:00",
+      "closes": "23:00"
+    },
+    "servesCuisine": "Buffet",
+    "priceRange": "€20-€30",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.0",
+      "reviewCount": "1070"
+    },
+    "image": "https://lemysteredubuffet.com/assets/images/restaurant.jpg"
+  }
+  </script>
+  <meta name="description" content="Tarifs du buffet &agrave; volont&eacute; au Myst&egrave;re du Buffet &agrave; Soissons. Adultes, enfants 3&ndash;6 ans, enfants 7&ndash;11 ans, plats &agrave; emporter.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<canvas id="ocean" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+<nav class="nav solid" id="nav">
+  <div class="nav-logo" onclick="window.location='../index.html'">
+    <img src="../assets/images/logo.png" alt="Logo">
+    <span class="nav-logo-name">Le Myst&egrave;re du Buffet</span>
+  </div>
+  <ul class="nav-links">
+    <li><a class="nav-link" href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+    <li><a class="nav-link" href="menu.html" data-fr="Notre Carte" data-en="Menu">Notre Carte</a></li>
+    <li><a class="nav-link" href="tarifs.html" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+    <li><a class="nav-link" href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang"><button class="lang-btn" data-lang-btn="fr">FR</button><button class="lang-btn" data-lang-btn="en">EN</button></div>
+    <button class="nav-resa" onclick="window.location='contact.html'" data-fr="R&eacute;server" data-en="Book">R&eacute;server</button>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="mnav" id="mnav">
+  <button class="mclose" id="mclose">&#215;</button>
+  <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="menu.html" data-fr="Notre Carte" data-en="Menu">Notre Carte</a>
+  <a href="tarifs.html" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
+  <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+</nav>
+
+<div class="page-hero">
+  <div class="phi">
+    <p class="lbl" data-fr="Buffet &agrave; Volont&eacute;" data-en="All-You-Can-Eat">Buffet &agrave; Volont&eacute;</p>
+    <h1>Nos <em>Tarifs</em></h1>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="tarifs-intro" data-reveal data-fr="Entr&eacute;es, plats et desserts &agrave; volont&eacute;. Le buffet comprend 3 boissons maximum par personne (sodas, jus de fruits, vins, bi&egrave;res). Les boissons sont &agrave; consommer uniquement sur place, y compris les boissons d&eacute;j&agrave; entam&eacute;es." data-en="Starters, mains and desserts unlimited. The buffet includes a maximum of 3 drinks per person (sodas, fruit juices, wines, beers). Drinks must be consumed on-site, including beverages already opened.">Entr&eacute;es, plats et desserts &agrave; volont&eacute;. Le buffet comprend 3 boissons maximum par personne (sodas, jus de fruits, vins, bi&egrave;res). Les boissons sont &agrave; consommer uniquement sur place, y compris les boissons d&eacute;j&agrave; entam&eacute;es.</p>
+
+    <p class="tcat" data-reveal data-fr="Adultes" data-en="Adults">Adultes</p>
+    <div class="tgrid" data-reveal>
+      <div class="tc">
+        <div class="tc-head"><div class="tc-who" data-fr="Lundi &mdash; Jeudi" data-en="Monday &mdash; Thursday">Lundi &mdash; Jeudi</div><div class="tc-when" data-fr="Du lundi au jeudi" data-en="Monday to Thursday">Du lundi au jeudi</div></div>
+        <div class="tc-body">
+          <div class="tc-row"><span class="tc-svc" data-fr="Midi" data-en="Lunch">Midi</span><span class="tc-price">20,00 &euro;</span></div>
+          <div class="tc-row"><span class="tc-svc" data-fr="Soir" data-en="Dinner">Soir</span><span class="tc-price">26,00 &euro;</span></div>
+        </div>
+      </div>
+      <div class="tc feat">
+        <div class="tc-head"><div class="tc-who" data-fr="Vendredi" data-en="Friday">Vendredi</div><div class="tc-when" data-fr="Le vendredi" data-en="On Friday">Le vendredi</div></div>
+        <div class="tc-body">
+          <div class="tc-row"><span class="tc-svc" data-fr="Midi" data-en="Lunch">Midi</span><span class="tc-price">20,00 &euro;</span></div>
+          <div class="tc-row"><span class="tc-svc" data-fr="Soir" data-en="Dinner">Soir</span><span class="tc-price">28,00 &euro;</span></div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="tc-head"><div class="tc-who" data-fr="Week-end &amp; F&eacute;ri&eacute;s" data-en="Weekend &amp; Holidays">Week-end &amp; F&eacute;ri&eacute;s</div><div class="tc-when" data-fr="Sam., dim., jours f&eacute;ri&eacute;s" data-en="Sat., sun., public holidays">Sam., dim., jours f&eacute;ri&eacute;s</div></div>
+        <div class="tc-body">
+          <div class="tc-row"><span class="tc-svc" data-fr="Midi" data-en="Lunch">Midi</span><span class="tc-price">26,00 &euro;</span></div>
+          <div class="tc-row"><span class="tc-svc" data-fr="Soir" data-en="Dinner">Soir</span><span class="tc-price">28,00 &euro;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="tcat" data-reveal data-fr="Enfants 3 &ndash; 6 ans" data-en="Children 3 &ndash; 6 years">Enfants 3 &ndash; 6 ans</p>
+    <div class="tgrid2" data-reveal>
+      <div class="tc">
+        <div class="tc-head"><div class="tc-who" data-fr="Lundi &mdash; Vendredi" data-en="Monday &mdash; Friday">Lundi &mdash; Vendredi</div><div class="tc-when" data-fr="Semaine" data-en="Weekdays">Semaine</div></div>
+        <div class="tc-body">
+          <div class="tc-row"><span class="tc-svc" data-fr="Midi" data-en="Lunch">Midi</span><span class="tc-price">8,00 &euro;</span></div>
+          <div class="tc-row"><span class="tc-svc" data-fr="Soir" data-en="Dinner">Soir</span><span class="tc-price">10,00 &euro;</span></div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="tc-head"><div class="tc-who" data-fr="Week-end &amp; F&eacute;ri&eacute;s" data-en="Weekend &amp; Holidays">Week-end &amp; F&eacute;ri&eacute;s</div><div class="tc-when" data-fr="Sam., dim., f&eacute;ri&eacute;s" data-en="Sat., sun., holidays">Sam., dim., f&eacute;ri&eacute;s</div></div>
+        <div class="tc-body">
+          <div class="tc-row"><span class="tc-svc" data-fr="Midi" data-en="Lunch">Midi</span><span class="tc-price">10,00 &euro;</span></div>
+          <div class="tc-row"><span class="tc-svc" data-fr="Soir" data-en="Dinner">Soir</span><span class="tc-price">10,00 &euro;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="tcat" data-reveal data-fr="Enfants 7 &ndash; 11 ans" data-en="Children 7 &ndash; 11 years">Enfants 7 &ndash; 11 ans</p>
+    <div class="tgrid2" data-reveal>
+      <div class="tc">
+        <div class="tc-head"><div class="tc-who" data-fr="Lundi &mdash; Vendredi" data-en="Monday &mdash; Friday">Lundi &mdash; Vendredi</div><div class="tc-when" data-fr="Semaine" data-en="Weekdays">Semaine</div></div>
+        <div class="tc-body">
+          <div class="tc-row"><span class="tc-svc" data-fr="Midi" data-en="Lunch">Midi</span><span class="tc-price">12,00 &euro;</span></div>
+          <div class="tc-row"><span class="tc-svc" data-fr="Soir" data-en="Dinner">Soir</span><span class="tc-price">15,00 &euro;</span></div>
+        </div>
+      </div>
+      <div class="tc">
+        <div class="tc-head"><div class="tc-who" data-fr="Week-end &amp; F&eacute;ri&eacute;s" data-en="Weekend &amp; Holidays">Week-end &amp; F&eacute;ri&eacute;s</div><div class="tc-when" data-fr="Sam., dim., f&eacute;ri&eacute;s" data-en="Sat., sun., holidays">Sam., dim., f&eacute;ri&eacute;s</div></div>
+        <div class="tc-body">
+          <div class="tc-row"><span class="tc-svc" data-fr="Midi" data-en="Lunch">Midi</span><span class="tc-price">15,00 &euro;</span></div>
+          <div class="tc-row"><span class="tc-svc" data-fr="Soir" data-en="Dinner">Soir</span><span class="tc-price">15,00 &euro;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="extras" data-reveal>
+      <div class="extra"><div class="extra-n" data-fr="Gratuit" data-en="Free">Gratuit</div><p data-fr="Enfants de moins de 3 ans" data-en="Children under 3 years old">Enfants de moins de 3 ans</p></div>
+      <div class="extra gx"><div class="extra-n g">8,00 &euro;</div><p data-fr="Plats &agrave; emporter &mdash; la barquette au choix sur le buffet" data-en="Takeaway &mdash; one tray of your choice from the buffet">Plats &agrave; emporter<br>La barquette au choix sur le buffet</p></div>
+    </div>
+
+    <div class="drinks-rule" data-reveal>
+      <div class="dr-n">3</div>
+      <div class="dr-t" data-fr="boissons maximum par personne, incluses dans le prix du buffet<br>Sodas &middot; Jus de fruits &middot; Vins &middot; Bi&egrave;res<br><small style='font-size:.72rem;opacity:.65'>Les boissons sont &agrave; consommer sur place uniquement.</small>" data-en="maximum drinks per person, included in the buffet price<br>Sodas &middot; Fruit juices &middot; Wines &middot; Beers<br><small style='font-size:.72rem;opacity:.65'>Drinks must be consumed on-site only.</small>">boissons maximum par personne, incluses dans le prix du buffet<br>Sodas &middot; Jus de fruits &middot; Vins &middot; Bi&egrave;res<br><small style="font-size:.72rem;opacity:.65">Les boissons sont &agrave; consommer sur place uniquement.</small></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-row"><img src="../assets/images/logo.png" alt="Logo"><span>Le Myst&egrave;re du Buffet</span></div>
+      <p>Restaurant buffet &agrave; volont&eacute; &mdash; Soissons</p>
+    </div>
+    <div class="fcol">
+      <h5 data-fr="Navigation" data-en="Navigation">Navigation</h5>
+      <ul>
+        <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="menu.html" data-fr="Notre Carte" data-en="Our Menu">Notre Carte</a></li>
+        <li><a href="tarifs.html" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+        <li><a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+        <li><a href="mentions-legales.html" data-fr="Mentions L&eacute;gales" data-en="Legal Notice">Mentions L&eacute;gales</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+33323741378">+33 3 23 74 13 78</a></li>
+        <li><a href="tel:0618361949">06 18 36 19 49</a></li>
+        <li><a href="mailto:lijiani0104@gmail.com">lijiani0104@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h5 data-fr="Adresse" data-en="Address">Adresse</h5>
+      <ul>
+        <li><span>10 Rue Jacques Brel</span></li>
+        <li><span>02200 Soissons</span></li>
+        <li><span data-fr="Ouvert 7j/7 d&egrave;s 12h" data-en="Open 7d/7 from 12:00">Ouvert 7j/7 d&egrave;s 12h</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Le Myst&egrave;re du Buffet &ensp;&mdash;&ensp; <a href="mentions-legales.html" data-fr="Mentions l&eacute;gales" data-en="Legal notice">Mentions l&eacute;gales</a></p>
+    <p>Made by <strong>Ody</strong> &middot; 2026</p>
+    <div class="footer-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;</span><span>4,0 / 5</span></div>
+  </div>
+</footer>
+<script src="../assets/js/ocean.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/extras.js"></script>
+</body>
+</html>

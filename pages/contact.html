@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; R&eacute;servation &mdash; Le Myst&egrave;re du Buffet</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/icon-192.png">
+  <link rel="apple-touch-icon" href="../assets/images/icon-192.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Contact & Réservation — Le Mystère du Buffet">
+  <meta property="og:description" content="Réservez votre table au Mystère du Buffet à Soissons. Formulaire en ligne, téléphone et adresse.">
+  <meta property="og:url" content="https://lemysteredubuffet.com/pages/contact.html">
+  <meta property="og:image" content="https://lemysteredubuffet.com/assets/images/restaurant.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Le Mystère du Buffet">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact & Réservation — Le Mystère du Buffet">
+  <meta name="twitter:description" content="Réservez votre table au Mystère du Buffet à Soissons. Formulaire en ligne, téléphone et adresse.">
+  <meta name="twitter:image" content="https://lemysteredubuffet.com/assets/images/restaurant.jpg">
+  <!-- Schema.org Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Le Mystère du Buffet",
+    "description": "Restaurant buffet à volonté à Soissons. Entrées, plats et desserts illimités.",
+    "url": "https://lemysteredubuffet.com",
+    "telephone": "+33323741378",
+    "email": "lijiani0104@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Rue Jacques Brel",
+      "addressLocality": "Soissons",
+      "postalCode": "02200",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.3815,
+      "longitude": 3.3223
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "12:00",
+      "closes": "23:00"
+    },
+    "servesCuisine": "Buffet",
+    "priceRange": "€20-€30",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.0",
+      "reviewCount": "1070"
+    },
+    "image": "https://lemysteredubuffet.com/assets/images/restaurant.jpg"
+  }
+  </script>
+  <meta name="description" content="R&eacute;servez votre table au Myst&egrave;re du Buffet &agrave; Soissons. Formulaire de contact, horaires, adresse et acc&egrave;s.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<canvas id="ocean" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+<nav class="nav solid" id="nav">
+  <div class="nav-logo" onclick="window.location='../index.html'">
+    <img src="../assets/images/logo.png" alt="Logo">
+    <span class="nav-logo-name">Le Myst&egrave;re du Buffet</span>
+  </div>
+  <ul class="nav-links">
+    <li><a class="nav-link" href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+    <li><a class="nav-link" href="menu.html" data-fr="Notre Carte" data-en="Menu">Notre Carte</a></li>
+    <li><a class="nav-link" href="tarifs.html" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+    <li><a class="nav-link" href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang"><button class="lang-btn" data-lang-btn="fr">FR</button><button class="lang-btn" data-lang-btn="en">EN</button></div>
+    <button class="nav-resa" onclick="window.location='contact.html'" data-fr="R&eacute;server" data-en="Book">R&eacute;server</button>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="mnav" id="mnav">
+  <button class="mclose" id="mclose">&#215;</button>
+  <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="menu.html" data-fr="Notre Carte" data-en="Menu">Notre Carte</a>
+  <a href="tarifs.html" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
+  <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+</nav>
+
+<div class="page-hero">
+  <div class="phi">
+    <p class="lbl" data-fr="R&eacute;servation &amp; Informations" data-en="Reservation &amp; Information">R&eacute;servation &amp; Informations</p>
+    <h1>Contact &amp; <em>R&eacute;servation</em></h1>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="cgrid">
+      <div data-reveal>
+        <p class="lbl" data-fr="Informations Pratiques" data-en="Practical Information">Informations Pratiques</p>
+        <h2 class="sec-title" style="font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:1.4rem" data-fr="Venez nous <em>rendre visite</em>" data-en="Come <em>visit us</em>">Venez nous <em>rendre visite</em></h2>
+        <p class="cinfo-text" data-fr="Nous sommes ouverts 7 jours sur 7 &agrave; partir de 12h00. Pour les groupes, &eacute;v&eacute;nements d&rsquo;entreprise ou anniversaires, contactez-nous directement afin d&rsquo;organiser votre repas dans les meilleures conditions." data-en="We are open 7 days a week from 12:00. For groups, corporate events or birthdays, please contact us directly to arrange your meal in the best possible conditions.">Nous sommes ouverts 7 jours sur 7 &agrave; partir de 12h00. Pour les groupes, &eacute;v&eacute;nements d&rsquo;entreprise ou anniversaires, contactez-nous directement afin d&rsquo;organiser votre repas dans les meilleures conditions.</p>
+        <div class="clist">
+          <div class="citem">
+            <span class="cico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+            <div class="citem-txt"><strong data-fr="Adresse" data-en="Address">Adresse</strong>10 Rue Jacques Brel, 02200 Soissons, France</div>
+          </div>
+          <div class="citem">
+            <span class="cico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+            <div class="citem-txt"><strong data-fr="Horaires" data-en="Hours">Horaires</strong><span data-fr="Tous les jours &agrave; partir de 12h00" data-en="Every day from 12:00">Tous les jours &agrave; partir de 12h00</span></div>
+          </div>
+          <div class="citem">
+            <span class="cico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.81 19.79 19.79 0 01.61 1.18 2 2 0 012.6 0h3a2 2 0 012 1.72c.13 1 .37 1.97.73 2.9a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.18-.98a2 2 0 012.11-.45c.93.36 1.9.6 2.9.73A2 2 0 0122 16.92z"/></svg></span>
+            <div class="citem-txt"><strong data-fr="T&eacute;l&eacute;phone" data-en="Phone">T&eacute;l&eacute;phone</strong><a href="tel:+33323741378">+33 3 23 74 13 78</a><br><a href="tel:0618361949">06 18 36 19 49</a></div>
+          </div>
+          <div class="citem">
+            <span class="cico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+            <div class="citem-txt"><strong>Email</strong><a href="mailto:lijiani0104@gmail.com">lijiani0104@gmail.com</a></div>
+          </div>
+          <div class="citem">
+            <span class="cico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span>
+            <div class="citem-txt"><strong>Site web</strong><a href="http://lemysteredubuffet.com" target="_blank" rel="noopener">lemysteredubuffet.com</a></div>
+          </div>
+          <div class="citem">
+            <span class="cico"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span>
+            <div class="citem-txt"><strong data-fr="Tarif adulte" data-en="Adult price">Tarif adulte</strong><span data-fr="&Agrave; partir de 20,00 &euro; (midi, lun.&ndash;jeu.)" data-en="From &euro;20.00 (lunch, Mon.&ndash;Thu.)">&Agrave; partir de 20,00 &euro; (midi, lun.&ndash;jeu.)</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cform" data-reveal id="resa-form">
+        <p class="lbl" style="margin-bottom:1.5rem" data-fr="Demande de R&eacute;servation" data-en="Reservation Request">Demande de R&eacute;servation</p>
+        <div class="fg2">
+          <div class="fg"><label data-fr="Pr&eacute;nom" data-en="First Name">Pr&eacute;nom</label><input type="text" name="prenom" data-ph-fr="Jean" data-ph-en="John" placeholder="Jean"></div>
+          <div class="fg"><label data-fr="Nom" data-en="Last Name">Nom</label><input type="text" name="nom" data-ph-fr="Dupont" data-ph-en="Smith" placeholder="Dupont"></div>
+          <div class="fg"><label>Email</label><input type="email" name="email" placeholder="votre@email.com"></div>
+          <div class="fg"><label data-fr="T&eacute;l&eacute;phone" data-en="Phone">T&eacute;l&eacute;phone</label><input type="tel" name="tel" placeholder="+33 6 00 00 00 00"></div>
+          <div class="fg"><label data-fr="Date souhait&eacute;e" data-en="Preferred Date">Date souhait&eacute;e</label><input type="date" name="date"></div>
+          <div class="fg"><label data-fr="Service" data-en="Service">Service</label><select><option value="" data-fr="Choisir..." data-en="Choose...">Choisir...</option><option value="midi" data-fr="Midi (d&eacute;jeuner)" data-en="Lunch">Midi (d&eacute;jeuner)</option><option value="soir" data-fr="Soir (d&icirc;ner)" data-en="Dinner">Soir (d&icirc;ner)</option></select></div>
+          <div class="fg"><label data-fr="Adultes" data-en="Adults">Adultes</label><input type="number" name="adultes" min="1" max="300" placeholder="2"></div>
+          <div class="fg"><label data-fr="Enfants" data-en="Children">Enfants</label><input type="number" name="enfants" min="0" max="50" placeholder="0"></div>
+          <div class="fg"><label data-fr="Occasion" data-en="Occasion">Occasion</label><select><option value="" data-fr="S&eacute;lectionner..." data-en="Select...">S&eacute;lectionner...</option><option value="standard" data-fr="Repas standard" data-en="Standard meal">Repas standard</option><option value="birthday" data-fr="Anniversaire" data-en="Birthday">Anniversaire</option><option value="business" data-fr="Repas d&rsquo;affaires" data-en="Business meal">Repas d&rsquo;affaires</option><option value="group" data-fr="Repas de groupe" data-en="Group event">Repas de groupe</option><option value="other" data-fr="Autre" data-en="Other">Autre</option></select></div>
+          <div class="fg"><label data-fr="Allergies connues" data-en="Known allergies">Allergies connues</label><input type="text" name="allergies" data-ph-fr="Lait, gluten, fruits &agrave; coques..." data-ph-en="Milk, gluten, nuts..." placeholder="Lait, gluten..."></div>
+          <div class="fg full"><label data-fr="Message ou demande particuli&egrave;re" data-en="Message or special request">Message ou demande particuli&egrave;re</label><textarea name="message" data-ph-fr="Chaise haute, d&eacute;coration d&rsquo;anniversaire, acc&egrave;s mobilit&eacute; r&eacute;duite..." data-ph-en="High chair, birthday decoration, wheelchair access..." placeholder="Chaise haute, d&eacute;coration..."></textarea></div>
+        </div>
+        <button class="f-submit" data-fr="Envoyer ma demande" data-en="Send my request">Envoyer ma demande</button>
+        <p class="f-note" data-fr="Nous vous contacterons dans les 24 heures pour confirmer votre r&eacute;servation. Pour une r&eacute;ponse rapide, appelez-nous au +33 3 23 74 13 78." data-en="We will contact you within 24 hours to confirm your reservation. For a quick response, call us at +33 3 23 74 13 78.">Nous vous contacterons dans les 24 heures pour confirmer votre r&eacute;servation. Pour une r&eacute;ponse rapide, appelez-nous au +33 3 23 74 13 78.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="map-wrap">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2598!2d3.3223!3d49.3815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e8c6a1d0000001%3A0x1!2s10+Rue+Jacques+Brel%2C+02200+Soissons%2C+France!5e0!3m2!1sfr!2sfr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Le Myst&egrave;re du Buffet"></iframe>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-row"><img src="../assets/images/logo.png" alt="Logo"><span>Le Myst&egrave;re du Buffet</span></div>
+      <p>Restaurant buffet &agrave; volont&eacute; &mdash; Soissons</p>
+    </div>
+    <div class="fcol">
+      <h5 data-fr="Navigation" data-en="Navigation">Navigation</h5>
+      <ul>
+        <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="menu.html" data-fr="Notre Carte" data-en="Our Menu">Notre Carte</a></li>
+        <li><a href="tarifs.html" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+        <li><a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+        <li><a href="mentions-legales.html" data-fr="Mentions L&eacute;gales" data-en="Legal Notice">Mentions L&eacute;gales</a></li>
+      </ul>
+    </div>
+    <div class="fcol"><h5>Contact</h5><ul><li><a href="tel:+33323741378">+33 3 23 74 13 78</a></li><li><a href="tel:0618361949">06 18 36 19 49</a></li><li><a href="mailto:lijiani0104@gmail.com">lijiani0104@gmail.com</a></li></ul></div>
+    <div class="fcol"><h5 data-fr="Adresse" data-en="Address">Adresse</h5><ul><li><span>10 Rue Jacques Brel</span></li><li><span>02200 Soissons</span></li><li><span data-fr="Ouvert 7j/7 d&egrave;s 12h" data-en="Open 7d/7 from 12:00">Ouvert 7j/7 d&egrave;s 12h</span></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Le Myst&egrave;re du Buffet &ensp;&mdash;&ensp; <a href="mentions-legales.html" data-fr="Mentions l&eacute;gales" data-en="Legal notice">Mentions l&eacute;gales</a></p>
+    <p>Made by <strong>Ody</strong> &middot; 2026</p>
+    <div class="footer-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;</span><span>4,0 / 5</span></div>
+  </div>
+</footer>
+<script src="../assets/js/ocean.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/extras.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre Carte &mdash; Le Myst&egrave;re du Buffet</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/icon-192.png">
+  <link rel="apple-touch-icon" href="../assets/images/icon-192.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Notre Carte — Le Mystère du Buffet">
+  <meta property="og:description" content="Apéritifs, cocktails alcoolisés et sans alcool, digestifs. Carte complète du Mystère du Buffet à Soissons.">
+  <meta property="og:url" content="https://lemysteredubuffet.com/pages/menu.html">
+  <meta property="og:image" content="https://lemysteredubuffet.com/assets/images/restaurant.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Le Mystère du Buffet">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Notre Carte — Le Mystère du Buffet">
+  <meta name="twitter:description" content="Apéritifs, cocktails alcoolisés et sans alcool, digestifs. Carte complète du Mystère du Buffet à Soissons.">
+  <meta name="twitter:image" content="https://lemysteredubuffet.com/assets/images/restaurant.jpg">
+  <!-- Schema.org Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Le Mystère du Buffet",
+    "description": "Restaurant buffet à volonté à Soissons. Entrées, plats et desserts illimités.",
+    "url": "https://lemysteredubuffet.com",
+    "telephone": "+33323741378",
+    "email": "lijiani0104@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Rue Jacques Brel",
+      "addressLocality": "Soissons",
+      "postalCode": "02200",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.3815,
+      "longitude": 3.3223
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "12:00",
+      "closes": "23:00"
+    },
+    "servesCuisine": "Buffet",
+    "priceRange": "€20-€30",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.0",
+      "reviewCount": "1070"
+    },
+    "image": "https://lemysteredubuffet.com/assets/images/restaurant.jpg"
+  }
+  </script>
+  <meta name="description" content="Ap&eacute;ritifs, digestifs, cocktails alcolis&eacute;s et sans alcool, caf&eacute;s et th&eacute;s. Carte compl&egrave;te du Myst&egrave;re du Buffet &agrave; Soissons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<canvas id="ocean" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
+<nav class="nav solid" id="nav">
+  <div class="nav-logo" onclick="window.location='../index.html'">
+    <img src="../assets/images/logo.png" alt="Logo">
+    <span class="nav-logo-name">Le Myst&egrave;re du Buffet</span>
+  </div>
+  <ul class="nav-links">
+    <li><a class="nav-link" href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+    <li><a class="nav-link" href="menu.html" data-fr="Notre Carte" data-en="Menu">Notre Carte</a></li>
+    <li><a class="nav-link" href="tarifs.html" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+    <li><a class="nav-link" href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang"><button class="lang-btn" data-lang-btn="fr">FR</button><button class="lang-btn" data-lang-btn="en">EN</button></div>
+    <button class="nav-resa" onclick="window.location='contact.html'" data-fr="R&eacute;server" data-en="Book">R&eacute;server</button>
+    <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="mnav" id="mnav">
+  <button class="mclose" id="mclose">&#215;</button>
+  <a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+  <a href="menu.html" data-fr="Notre Carte" data-en="Menu">Notre Carte</a>
+  <a href="tarifs.html" data-fr="Tarifs" data-en="Pricing">Tarifs</a>
+  <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+</nav>
+<div class="page-hero">
+  <div class="phi">
+    <p class="lbl" data-fr="Ap&eacute;ritifs, Cocktails, Digestifs" data-en="Aperitifs, Cocktails, Digestifs">Ap&eacute;ritifs, Cocktails, Digestifs</p>
+    <h1>Notre <em>Carte</em></h1>
+  </div>
+</div>
+<section class="sec">
+  <div class="wrap" data-tabs>
+    <div class="tabs-bar" data-reveal>
+      <button class="tab-btn active" data-tab-btn="aperitifs" data-fr="Ap&eacute;ritifs" data-en="Aperitifs">Ap&eacute;ritifs</button>
+      <button class="tab-btn" data-tab-btn="digestifs" data-fr="Digestifs &amp; Caf&eacute;s" data-en="Digestifs &amp; Coffees">Digestifs &amp; Caf&eacute;s</button>
+      <button class="tab-btn" data-tab-btn="cka" data-fr="Cocktails Alcolis&eacute;s" data-en="Alcoholic Cocktails">Cocktails Alcolis&eacute;s</button>
+      <button class="tab-btn" data-tab-btn="cks" data-fr="Cocktails Sans Alcool" data-en="Non-Alcoholic Cocktails">Cocktails Sans Alcool</button>
+    </div>
+
+    <div data-tab-panel="aperitifs" class="active" data-reveal>
+      <p class="menu-cat" data-fr="Ap&eacute;ritifs" data-en="Aperitifs">Ap&eacute;ritifs</p>
+      <div class="drinks">
+        <div class="dc"><div class="dc-row"><span class="dc-name">Cocktail maison<span class="dc-vol"> &mdash; 12 cl</span></span><span class="dc-price">4,90 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Cocktail de fruits<span class="dc-vol"> &mdash; 12 cl</span></span><span class="dc-price">4,00 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Kir cassis / m&ucirc;re / p&ecirc;che<span class="dc-vol"> &mdash; 12 cl</span></span><span class="dc-price">4,00 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Kir royal<span class="dc-vol"> &mdash; 9 cl</span></span><span class="dc-price">7,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Coupe de champagne<span class="dc-vol"> &mdash; 9 cl</span></span><span class="dc-price">7,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Martini rouge / blanc<span class="dc-vol"> &mdash; 4 cl</span></span><span class="dc-price">4,00 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Martini gin<span class="dc-vol"> &mdash; 5 cl</span></span><span class="dc-price">5,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Ricard / Pastis<span class="dc-vol"> &mdash; 2 cl</span></span><span class="dc-price">4,00 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Whisky Johnnie Walker / J&amp;B<span class="dc-vol"> &mdash; 4 cl</span></span><span class="dc-price">5,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Whisky Jack Daniel&rsquo;s<span class="dc-vol"> &mdash; 4 cl</span></span><span class="dc-price">7,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Porto rouge<span class="dc-vol"> &mdash; 4 cl</span></span><span class="dc-price">4,00 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Whisky coca / Vodka orange<span class="dc-vol"> &mdash; 16 cl</span></span><span class="dc-price">6,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Vodka / Rhum / Gin<span class="dc-vol"> &mdash; 4 cl</span></span><span class="dc-price">4,90 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Suze<span class="dc-vol"> &mdash; 4 cl</span></span><span class="dc-price">4,00 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Champagne<span class="dc-vol"> &mdash; 75 cl</span></span><span class="dc-price">37,50 &euro;</span></div></div>
+      </div>
+    </div>
+
+    <div data-tab-panel="digestifs" data-reveal>
+      <p class="menu-cat" data-fr="Digestifs" data-en="Digestifs">Digestifs</p>
+      <div class="drinks" style="margin-bottom:3rem">
+        <div class="dc"><div class="dc-row"><span class="dc-name">Calvados<span class="dc-vol"> &mdash; 4 cl</span></span><span class="dc-price">4,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Get 27<span class="dc-vol"> &mdash; 4 cl</span></span><span class="dc-price">4,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Cognac<span class="dc-vol"> &mdash; 4 cl</span></span><span class="dc-price">7,50 &euro;</span></div></div>
+      </div>
+      <p class="menu-cat" data-fr="Caf&eacute;s &amp; Th&eacute;s" data-en="Coffees &amp; Teas">Caf&eacute;s &amp; Th&eacute;s</p>
+      <div class="drinks">
+        <div class="dc"><div class="dc-row"><span class="dc-name">Th&eacute; vert / Jasmin / Menthe</span><span class="dc-price">3,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Caf&eacute; / D&eacute;caf&eacute;in&eacute;</span><span class="dc-price">2,00 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Double caf&eacute;</span><span class="dc-price">3,50 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Caf&eacute; cr&egrave;me</span><span class="dc-price">3,00 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Cappuccino</span><span class="dc-price">3,00 &euro;</span></div></div>
+        <div class="dc"><div class="dc-row"><span class="dc-name">Irish Coffee</span><span class="dc-price">7,50 &euro;</span></div></div>
+      </div>
+    </div>
+
+    <div data-tab-panel="cka" data-reveal>
+      <div class="ck-hero">
+        <div class="ck-price">7,90 &euro;</div>
+        <div class="ck-hero-info">
+          <p class="lbl" data-fr="Cocktails avec alcool" data-en="Alcoholic cocktails">Cocktails avec alcool</p>
+          <p data-fr="Environ 25 cl par verre. Prix unitaire par cocktail. L&rsquo;abus d&rsquo;alcool est dangereux pour la sant&eacute;." data-en="Approximately 25 cl per glass. Price per cocktail. Alcohol abuse is dangerous for your health.">Environ 25 cl par verre. Prix unitaire par cocktail. L&rsquo;abus d&rsquo;alcool est dangereux pour la sant&eacute;.</p>
+          <p class="ck-allergen" data-fr="(*) Allergène : prot&eacute;ines de lait" data-en="(*) Allergen: milk proteins">(*) Allerg&egrave;ne : prot&eacute;ines de lait</p>
+        </div>
+      </div>
+      <div class="cks">
+        <div class="ck"><h4>Pina Colada *</h4><p data-fr="Rhum de Guadeloupe, alcool, jus d&rsquo;ananas, cr&egrave;me, parfum coco" data-en="Guadeloupe rum, alcohol, pineapple juice, cream, coconut flavour">Rhum de Guadeloupe, alcool, jus d&rsquo;ananas, cr&egrave;me, parfum coco</p><p class="al" data-fr="* Allerg&egrave;ne : prot&eacute;ines de lait" data-en="* Allergen: milk proteins">* Allerg&egrave;ne : prot&eacute;ines de lait</p></div>
+        <div class="ck"><h4>Zomby</h4><p data-fr="Rhum de Guadeloupe, alcool, jus d&rsquo;orange, parfums abricot, citron et &eacute;pices" data-en="Guadeloupe rum, alcohol, orange juice, apricot, lemon and spice flavours">Rhum de Guadeloupe, alcool, jus d&rsquo;orange, parfums abricot, citron et &eacute;pices</p></div>
+        <div class="ck"><h4>Sex on the Beach</h4><p data-fr="Vodka fran&ccedil;aise, alcool, jus d&rsquo;orange, jus de la passion, papaye, p&ecirc;che, p&ecirc;che blanche et melon" data-en="French vodka, alcohol, orange juice, passion fruit, papaya, peach, white peach and melon">Vodka fran&ccedil;aise, alcool, jus d&rsquo;orange, jus de la passion, papaye, p&ecirc;che, p&ecirc;che blanche et melon</p></div>
+        <div class="ck"><h4>Moscow Mule</h4><p data-fr="Vodka fran&ccedil;aise, parfums citron, gingembre et concombre" data-en="French vodka, lemon, ginger and cucumber flavours">Vodka fran&ccedil;aise, parfums citron, gingembre et concombre</p><p class="al">Env. 15&ndash;17% alcool</p></div>
+        <div class="ck"><h4>Swimming Pool *</h4><p data-fr="Rhum de Guadeloupe, alcool, jus d&rsquo;ananas, parfums cura&ccedil;ao, Pina Colada" data-en="Guadeloupe rum, alcohol, pineapple juice, cura&ccedil;ao, Pina Colada">Rhum de Guadeloupe, alcool, jus d&rsquo;ananas, parfums cura&ccedil;ao, Pina Colada</p><p class="al" data-fr="* Allerg&egrave;ne : prot&eacute;ines de lait" data-en="* Allergen: milk proteins">* Allerg&egrave;ne : prot&eacute;ines de lait</p></div>
+        <div class="ck"><h4>Bikini</h4><p data-fr="Rhum de Guadeloupe, alcool, jus d&rsquo;ananas, past&egrave;que, banane, framboise, tequila, gin et citron" data-en="Guadeloupe rum, alcohol, pineapple juice, watermelon, banana, raspberry, tequila, gin and lemon">Rhum de Guadeloupe, alcool, jus d&rsquo;ananas, past&egrave;que, banane, framboise, tequila, gin et citron</p></div>
+        <div class="ck"><h4>69</h4><p data-fr="Rhum de Guadeloupe, alcool, jus d&rsquo;ananas, parfums goyave, pitaya et gingembre" data-en="Guadeloupe rum, alcohol, pineapple juice, guava, pitaya and ginger">Rhum de Guadeloupe, alcool, jus d&rsquo;ananas, parfums goyave, pitaya et gingembre</p></div>
+        <div class="ck"><h4>Mojito &mdash; <small style="font-weight:300;opacity:.55">10 cl</small></h4><p data-fr="Rhum de Guadeloupe, alcool, sucre, eau gazeuse, parfums menthe fra&icirc;che, citron et citron vert" data-en="Guadeloupe rum, alcohol, sugar, sparkling water, fresh mint, lemon and lime">Rhum de Guadeloupe, alcool, sucre, eau gazeuse, parfums menthe fra&icirc;che, citron et citron vert</p><p class="al">16% de contenance en alcool</p></div>
+      </div>
+    </div>
+
+    <div data-tab-panel="cks" data-reveal>
+      <div class="ck-hero" style="border-color:rgba(200,168,75,.22);background:rgba(200,168,75,.04)">
+        <div class="ck-price gold">6,90 &euro;</div>
+        <div class="ck-hero-info">
+          <p class="lbl" style="color:var(--gold)" data-fr="Cocktails sans alcool" data-en="Non-alcoholic cocktails">Cocktails sans alcool</p>
+          <p data-fr="Environ 25 cl par verre. Prix unitaire par cocktail." data-en="Approximately 25 cl per glass. Price per cocktail.">Environ 25 cl par verre. Prix unitaire par cocktail.</p>
+          <p class="ck-allergen" data-fr="(*) Allerg&egrave;ne : prot&eacute;ines de lait" data-en="(*) Allergen: milk proteins">(*) Allerg&egrave;ne : prot&eacute;ines de lait</p>
+        </div>
+      </div>
+      <div class="cks">
+        <div class="ck"><h4 class="g">Caribbean Sun</h4><p data-fr="Tourbillon exotique au jus d&rsquo;orange, parfums mangue, ananas, kiwi et orange" data-en="Exotic blend with orange juice, mango, pineapple, kiwi and orange">Tourbillon exotique au jus d&rsquo;orange, parfums mangue, ananas, kiwi et orange</p></div>
+        <div class="ck"><h4 class="g">Paradise Dream</h4><p data-fr="Jus d&rsquo;ananas, cascade de saveurs fraise, framboise et p&ecirc;che blanche" data-en="Pineapple juice, strawberry, raspberry and white peach">Jus d&rsquo;ananas, cascade de saveurs fraise, framboise et p&ecirc;che blanche</p></div>
+        <div class="ck"><h4 class="g">Jungle Green</h4><p data-fr="Exp&eacute;dition sauvage au jus d&rsquo;orange, go&ucirc;ts kiwi, banane, pomme verte et orange" data-en="Orange juice with kiwi, banana, green apple and orange">Exp&eacute;dition sauvage au jus d&rsquo;orange, go&ucirc;ts kiwi, banane, pomme verte et orange</p></div>
+        <div class="ck"><h4 class="g">Koyo</h4><p data-fr="Cocktail &agrave; base de jus de pomme ou jus d&rsquo;ananas, saveurs fraise, melon, banane, citron et vanille" data-en="Apple or pineapple juice, strawberry, melon, banana, lemon and vanilla">Cocktail &agrave; base de jus de pomme ou jus d&rsquo;ananas, saveurs fraise, melon, banane, citron et vanille</p></div>
+        <div class="ck"><h4 class="g">Coconut King *</h4><p data-fr="D&eacute;lice des &icirc;les au jus d&rsquo;ananas et &agrave; la cr&egrave;me, saveurs coco" data-en="Island delight with pineapple juice and cream, coconut flavour">D&eacute;lice des &icirc;les au jus d&rsquo;ananas et &agrave; la cr&egrave;me, saveurs coco</p><p class="al" data-fr="* Allerg&egrave;ne : prot&eacute;ines de lait" data-en="* Allergen: milk proteins">* Allerg&egrave;ne : prot&eacute;ines de lait</p></div>
+        <div class="ck"><h4 class="g">Purple</h4><p data-fr="Fusion p&eacute;tillante &agrave; base de framboise, fraise, citron, violette, myrtille, m&ucirc;re et eau gazeuse" data-en="Sparkling blend of raspberry, strawberry, lemon, violet, blueberry, blackberry and sparkling water">Fusion p&eacute;tillante &agrave; base de framboise, fraise, citron, violette, myrtille, m&ucirc;re et eau gazeuse</p></div>
+        <div class="ck"><h4 class="g">Peace &amp; Love</h4><p data-fr="&Eacute;vasion intense au jus d&rsquo;orange, parfums tequila, jasmin, violette et hibiscus" data-en="Intense blend with orange juice, tequila, jasmine, violet and hibiscus">Évasion intense au jus d&rsquo;orange, parfums tequila, jasmin, violette et hibiscus</p></div>
+        <div class="ck"><h4 class="g">Virgin Mojito &mdash; <small style="font-weight:300;opacity:.55">10 cl</small></h4><p data-fr="Sucre et eau gazeuse, saveurs rhum, menthe fra&icirc;che et citron vert" data-en="Sugar and sparkling water, rum, fresh mint and lime">Sucre et eau gazeuse, saveurs rhum, menthe fra&icirc;che et citron vert</p><p class="al">16% de contenance</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-row"><img src="../assets/images/logo.png" alt="Logo"><span>Le Myst&egrave;re du Buffet</span></div>
+      <p>Restaurant buffet &agrave; volont&eacute; &mdash; Soissons</p>
+    </div>
+    <div class="fcol">
+      <h5 data-fr="Navigation" data-en="Navigation">Navigation</h5>
+      <ul>
+        <li><a href="../index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+        <li><a href="menu.html" data-fr="Notre Carte" data-en="Our Menu">Notre Carte</a></li>
+        <li><a href="tarifs.html" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+        <li><a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a></li>
+        <li><a href="mentions-legales.html" data-fr="Mentions L&eacute;gales" data-en="Legal Notice">Mentions L&eacute;gales</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="tel:+33323741378">+33 3 23 74 13 78</a></li>
+        <li><a href="tel:0618361949">06 18 36 19 49</a></li>
+        <li><a href="mailto:lijiani0104@gmail.com">lijiani0104@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h5 data-fr="Adresse" data-en="Address">Adresse</h5>
+      <ul>
+        <li><span>10 Rue Jacques Brel</span></li>
+        <li><span>02200 Soissons</span></li>
+        <li><span data-fr="Ouvert 7j/7 d&egrave;s 12h" data-en="Open 7d/7 from 12:00">Ouvert 7j/7 d&egrave;s 12h</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Le Myst&egrave;re du Buffet &ensp;&mdash;&ensp; <a href="mentions-legales.html" data-fr="Mentions l&eacute;gales" data-en="Legal notice">Mentions l&eacute;gales</a></p>
+    <p>Made by <strong>Ody</strong> &middot; 2026</p>
+    <div class="footer-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;</span><span>4,0 / 5</span></div>
+  </div>
+</footer>
+<script src="../assets/js/ocean.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/extras.js"></script>
+</body>
+</html>
