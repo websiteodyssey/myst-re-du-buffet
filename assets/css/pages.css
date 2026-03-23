@@ -43,7 +43,7 @@
 .tab-btn {
   padding: 1rem 1.8rem; background: none; border: none;
   border-bottom: 2px solid transparent; color: var(--dim);
-  font-family: var(--fb); font-size: .64rem; letter-spacing: .18em;
+  font-family: var(--fb); font-size: .78rem; letter-spacing: .18em; font-weight:500;
   text-transform: uppercase; cursor: pointer; white-space: nowrap;
   transition: all .28s; margin-bottom: -1px; flex-shrink: 0;
 }
@@ -54,7 +54,7 @@
 @keyframes fadePanel { from{opacity:0;transform:translateY(7px)} to{opacity:1;transform:translateY(0)} }
 
 .menu-cat {
-  font-family: var(--fd); font-style: italic; font-size: 1.55rem; color: var(--dim);
+  font-family: var(--fd); font-style: italic; font-size: 2rem; color: rgba(221,238,255,.75);
   margin-bottom: 1.8rem; padding-bottom: .75rem; border-bottom: 1px solid var(--border2);
 }
 .menu-cat + .menu-cat { margin-top: 3rem; }
@@ -76,9 +76,9 @@
 .dc:hover { border-color: rgba(0,212,212,.2); transform: translateY(-3px); }
 .dc:hover::before { transform: scaleX(1); }
 .dc-row { display: flex; justify-content: space-between; align-items: baseline; gap: .8rem; }
-.dc-name { font-size: .86rem; font-weight: 400; color: var(--white); flex: 1; min-width: 0; }
+.dc-name { font-size: 1rem; font-weight: 400; color: var(--white); flex: 1; min-width: 0; }
 .dc-vol { font-size: .62rem; color: var(--dim2); margin-left: .3rem; white-space: nowrap; }
-.dc-price { font-family: var(--fd); font-size: 1.06rem; color: var(--gold); flex-shrink: 0; }
+.dc-price { font-family: var(--fd); font-size: 1.3rem; color: var(--gold); flex-shrink: 0; }
 .dc-note { font-size: .72rem; color: rgba(221,238,255,.36); margin-top: .45rem; font-style: italic; line-height: 1.5; }
 
 /* ───────────────────────────────────────
@@ -106,9 +106,9 @@
   padding: 1.5rem 1.6rem; border-radius: 3px; transition: all .3s var(--ease);
 }
 .ck:hover { border-color: rgba(0,212,212,.22); transform: translateY(-4px); box-shadow: 0 14px 36px rgba(0,0,0,.35); }
-.ck h4 { font-family: var(--fb); font-size: .76rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: .55rem; }
+.ck h4 { font-family: var(--fb); font-size: .9rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: .55rem; }
 .ck h4.g { color: var(--gold); }
-.ck p { font-size: .76rem; color: var(--dim); line-height: 1.72; }
+.ck p { font-size: .9rem; color: var(--dim); line-height: 1.72; }
 .ck .al { font-size: .68rem; color: rgba(200,168,75,.65); margin-top: .45rem; font-style: italic; }
 
 /* ───────────────────────────────────────
