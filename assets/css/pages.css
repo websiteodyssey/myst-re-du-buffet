@@ -41,9 +41,9 @@
 }
 .tabs-bar::-webkit-scrollbar { display: none; }
 .tab-btn {
-  padding: 1rem 1.8rem; background: none; border: none;
-  border-bottom: 2px solid transparent; color: var(--dim);
-  font-family: var(--fb); font-size: .9rem; letter-spacing: .18em; font-weight:500;
+  padding: 1.1rem 2rem; background: none; border: none;
+  border-bottom: 2px solid transparent; color: rgba(221,238,255,.75);
+  font-family: var(--fb); font-size: .78rem; letter-spacing: .18em; font-weight:500;
   text-transform: uppercase; cursor: pointer; white-space: nowrap;
   transition: all .28s; margin-bottom: -1px; flex-shrink: 0;
 }
@@ -54,7 +54,7 @@
 @keyframes fadePanel { from{opacity:0;transform:translateY(7px)} to{opacity:1;transform:translateY(0)} }
 
 .menu-cat {
-  font-family: var(--fd); font-style: italic; font-size: 2rem; color: rgba(221,238,255,.75);
+  font-family: var(--fd); font-style: italic; font-size: 2.2rem; color: rgba(221,238,255,.85);
   margin-bottom: 1.8rem; padding-bottom: .75rem; border-bottom: 1px solid var(--border2);
 }
 .menu-cat + .menu-cat { margin-top: 3rem; }
@@ -65,7 +65,7 @@
 .drinks { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1.1rem; }
 .dc {
   background: rgba(13,29,74,.45); border: 1px solid var(--border2);
-  padding: 1.3rem 1.5rem; border-radius: 3px;
+  padding: 1.5rem 1.8rem; border-radius: 3px;
   transition: all .28s var(--ease); position: relative; overflow: hidden;
 }
 .dc::before {
@@ -76,9 +76,9 @@
 .dc:hover { border-color: rgba(0,212,212,.2); transform: translateY(-3px); }
 .dc:hover::before { transform: scaleX(1); }
 .dc-row { display: flex; justify-content: space-between; align-items: baseline; gap: .8rem; }
-.dc-name { font-size: 1.1rem; font-weight: 400; color: var(--white); flex: 1; min-width: 0; }
-.dc-vol { font-size: .62rem; color: var(--dim2); margin-left: .3rem; white-space: nowrap; }
-.dc-price { font-family: var(--fd); font-size: 1.3rem; color: var(--gold); flex-shrink: 0; }
+.dc-name { font-size: 1.1rem; font-weight: 500; color: #ffffff; flex: 1; min-width: 0; }
+.dc-vol { font-size: .82rem; color: var(--dim2); margin-left: .4rem; white-space: nowrap; }
+.dc-price { font-family: var(--fd); font-size: 1.5rem; color: var(--gold); flex-shrink: 0; }
 .dc-note { font-size: .72rem; color: rgba(221,238,255,.36); margin-top: .45rem; font-style: italic; line-height: 1.5; }
 
 /* ───────────────────────────────────────
@@ -90,11 +90,11 @@
   background: rgba(0,212,212,.04); border: 1px solid var(--border); border-radius: 3px;
   flex-wrap: wrap;
 }
-.ck-price { font-family: var(--fd); font-size: 4rem; font-style: italic; color: var(--teal); line-height: 1; white-space: nowrap; }
+.ck-price { font-family: var(--fd); font-size: 4.5rem; font-style: italic; color: var(--teal); line-height: 1; white-space: nowrap; }
 .ck-price.gold { color: var(--gold); }
 .ck-hero-info { flex: 1; min-width: 200px; }
 .ck-hero-info .lbl { margin-bottom: .4rem; }
-.ck-hero-info p { font-size: .9rem; color: var(--dim); line-height: 1.75; }
+.ck-hero-info p { font-size: .92rem; color: var(--dim); line-height: 1.75; }
 .ck-al { font-size: .68rem; color: rgba(200,168,75,.65); margin-top: .4rem; font-style: italic; }
 
 /* ───────────────────────────────────────
@@ -106,15 +106,15 @@
   padding: 1.5rem 1.6rem; border-radius: 3px; transition: all .3s var(--ease);
 }
 .ck:hover { border-color: rgba(0,212,212,.22); transform: translateY(-4px); box-shadow: 0 14px 36px rgba(0,0,0,.35); }
-.ck h4 { font-family: var(--fb); font-size: 1rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: .55rem; }
+.ck h4 { font-family: var(--fb); font-size: 1rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: .65rem; }
 .ck h4.g { color: var(--gold); }
-.ck p { font-size: 1rem; color: var(--dim); line-height: 1.72; }
+.ck p { font-size: 1rem; color: var(--dim); line-height: 1.75; }
 .ck .al { font-size: .68rem; color: rgba(200,168,75,.65); margin-top: .45rem; font-style: italic; }
 
 /* ───────────────────────────────────────
    TARIFS
 ─────────────────────────────────────── */
-.tarifs-intro { text-align: center; max-width: 680px; margin: 0 auto 4rem; font-size: 1rem; color: var(--dim); line-height: 1.95; }
+.tarifs-intro { text-align: center; max-width: 680px; margin: 0 auto 4rem; font-size: 1.05rem; color: var(--dim); line-height: 1.95; }
 .tcat { font-family: var(--fd); font-style: italic; font-size: 1.5rem; color: rgba(221,238,255,.42); text-align: center; margin: 3.5rem 0 1.5rem; }
 .tcat:first-of-type { margin-top: 0; }
 .tgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.4rem; margin-bottom: 1.4rem; }
@@ -129,12 +129,12 @@
 .tc.feat .tc-head { background: linear-gradient(135deg, var(--teal), #005599); }
 .tc.feat .tc-who, .tc.feat .tc-when { color: rgba(3,9,24,.9); }
 .tc-who { font-family: var(--fd); font-size: 1.45rem; font-style: italic; }
-.tc-when { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); margin-top: .3rem; }
+.tc-when { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); margin-top: .3rem; }
 .tc-body { padding: 1.6rem; }
 .tc-row { display: flex; justify-content: space-between; align-items: center; padding: .65rem 0; border-bottom: 1px solid var(--border2); }
 .tc-row:last-child { border-bottom: none; }
-.tc-svc { font-size: .63rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
-.tc-price { font-family: var(--fd); font-size: 1.15rem; color: var(--gold); }
+.tc-svc { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+.tc-price { font-family: var(--fd); font-size: 1.45rem; color: var(--gold); }
 .tc.feat .tc-price { color: var(--teal); }
 
 .extras { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 1.5rem; }
@@ -142,24 +142,24 @@
 .extra.gx { border-color: rgba(200,168,75,.22); background: rgba(200,168,75,.04); }
 .extra-n { font-family: var(--fd); font-size: 2.8rem; font-style: italic; color: var(--teal); line-height: 1; }
 .extra-n.g { color: var(--gold); }
-.extra p { font-size: .9rem; color: var(--dim); margin-top: .5rem; line-height: 1.65; }
+.extra p { font-size: .78rem; color: var(--dim); margin-top: .5rem; line-height: 1.65; }
 
 .drinks-rule { text-align: center; border: 1px solid var(--border); border-radius: 3px; padding: 2.8rem 2rem; background: rgba(13,29,74,.28); margin-top: 2rem; }
 .dr-n { font-family: var(--fd); font-size: 5.5rem; font-style: italic; color: var(--teal); line-height: 1; }
-.dr-t { font-size: .8rem; color: var(--dim); margin-top: .5rem; line-height: 1.8; }
+.dr-t { font-size: 1rem; color: var(--dim); margin-top: .5rem; line-height: 1.8; }
 
 /* ───────────────────────────────────────
    CONTACT
 ─────────────────────────────────────── */
 .cgrid { display: grid; grid-template-columns: 1fr 1.55fr; gap: 5rem; align-items: start; }
-.cinfo-text { font-size: 1rem; color: var(--dim); line-height: 1.95; margin-bottom: 2.2rem; }
+.cinfo-text { font-size: 1.05rem; color: var(--dim); line-height: 1.95; margin-bottom: 2.2rem; }
 .clist { display: flex; flex-direction: column; }
 .citem { display: flex; align-items: flex-start; gap: .9rem; padding: .9rem 0; border-bottom: 1px solid var(--border2); }
 .citem:last-child { border-bottom: none; }
 .cico { flex-shrink: 0; width: 17px; height: 17px; margin-top: .12rem; }
 .cico svg { width:100%; height:100%; fill:none; stroke:var(--teal); stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
-.citem-txt { font-size: .83rem; color: var(--dim); line-height: 1.65; min-width: 0; }
-.citem-txt strong { color: var(--white); display: block; font-size: .59rem; letter-spacing: .15em; text-transform: uppercase; margin-bottom: .18rem; font-family: var(--fb); font-weight: 500; }
+.citem-txt { font-size: 1rem; color: var(--dim); line-height: 1.65; min-width: 0; }
+.citem-txt strong { color: var(--white); display: block; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; margin-bottom: .18rem; font-family: var(--fb); font-weight: 500; }
 .citem-txt a { color: var(--dim); word-break: break-all; }
 .citem-txt a:hover { color: var(--teal); }
 
