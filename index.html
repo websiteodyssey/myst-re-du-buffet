@@ -99,12 +99,8 @@
     }
     .hero-photo {
       position: absolute; inset: 0;
-      background: url('assets/images/restaurant.jpg') center 28% / cover no-repeat;
-      filter: brightness(.38) saturate(1.2);
-      transform: scale(1.02);
-      transition: transform 14s ease;
+      background: var(--dark);
     }
-    #hero:hover .hero-photo { transform: scale(1.0); }
     .hero-fade {
       position: absolute; inset: 0;
       background:
@@ -423,7 +419,6 @@
     <div class="hero-badge" data-fr="Restaurant Buffet &#8212; Soissons, France" data-en="Buffet Restaurant &#8212; Soissons, France">Restaurant Buffet &#8212; Soissons, France</div>
     <img class="hero-logo" src="assets/images/logo.png" alt="Le Myst&#232;re du Buffet">
     <h1 class="hero-title">Le Myst&#232;re<br><span class="accent" data-fr="du Buffet" data-en="of the Buffet">du Buffet</span></h1>
-    <p class="hero-sub" data-fr="Entr&#233;es &middot; Plats &middot; Desserts &agrave; volont&#233;" data-en="Starters &middot; Mains &middot; Desserts Unlimited">Entr&#233;es &middot; Plats &middot; Desserts &agrave; volont&#233;</p>
     <div class="hero-btns">
       <a href="pages/tarifs.html" class="btn btn-t" data-fr="Voir les Tarifs" data-en="View Pricing">Voir les Tarifs</a>
       <a href="pages/contact.html" class="btn btn-o" data-fr="R&#233;server une Table" data-en="Book a Table">R&#233;server une Table</a>
@@ -437,7 +432,7 @@
 
 <div class="info-banner" data-reveal>
   <div class="wrap" style="text-align:center">
-    <p data-fr="Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais &#224; l&#8217;int&#233;rieur du restaurant." data-en="To better welcome you, orders and payments are now made inside the restaurant.">Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais &#224; l&#8217;int&#233;rieur du restaurant.</p>
+    <p data-fr="Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais d&#232;s l&#8217;entr&#233;e du restaurant." data-en="To better welcome you, orders and payments are now made at the entrance of the restaurant.">Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais d&#232;s l&#8217;entr&#233;e du restaurant.</p>
   </div>
 </div>
 
@@ -460,10 +455,9 @@
         <div class="icard-top"><img src="assets/images/logo.png" alt="Le Myst&#232;re du Buffet"></div>
         <div class="icard-body">
           <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span><div class="itxt"><strong data-fr="Adresse" data-en="Address">Adresse</strong>10 Rue Jacques Brel, 02200 Soissons</div></div>
-          <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div class="itxt"><strong data-fr="Horaires" data-en="Hours">Horaires</strong><span data-fr="Lun&ndash;Dim : 12h00&ndash;14h30 &middot; Lun&ndash;Ven : 19h30&ndash;22h00<br>Sam : 18h45&ndash;22h00 &middot; Dim : 19h00&ndash;22h00" data-en="Mon&ndash;Sun: 12:00&ndash;2:30pm &middot; Mon&ndash;Fri: 7:30&ndash;10pm<br>Sat: 6:45&ndash;10pm &middot; Sun: 7:00&ndash;10pm">Lun&ndash;Dim : 12h00&ndash;14h30 &middot; Lun&ndash;Ven : 19h30&ndash;22h00<br>Sam : 18h45&ndash;22h00 &middot; Dim : 19h00&ndash;22h00</span></div></div>
-          <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.81 19.79 19.79 0 01.61 1.18 2 2 0 012.6 0h3a2 2 0 012 1.72c.13 1 .37 1.97.73 2.9a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.18-.98a2 2 0 012.11-.45c.93.36 1.9.6 2.9.73A2 2 0 0122 16.92z"/></svg></span><div class="itxt"><strong data-fr="T&#233;l&#233;phone" data-en="Phone">T&#233;l&#233;phone</strong><a href="tel:+33323741378">+33 3 23 74 13 78</a> &#8212; <a href="tel:0618361949">06 18 36 19 49</a></div></div>
+          <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div class="itxt"><strong data-fr="Horaires" data-en="Hours">Horaires</strong><span data-fr="Midi : Lun&ndash;Dim 12h00&ndash;14h30<br>Soir : Lun&ndash;Ven 19h30&ndash;22h00<br>Sam 18h45&ndash;22h00 &middot; Dim 19h00&ndash;22h00" data-en="Lunch: Mon&ndash;Sun 12:00&ndash;2:30pm<br>Dinner: Mon&ndash;Fri 7:30&ndash;10pm<br>Sat 6:45&ndash;10pm &middot; Sun 7:00&ndash;10pm">Midi : Lun&ndash;Dim 12h00&ndash;14h30<br>Soir : Lun&ndash;Ven 19h30&ndash;22h00<br>Sam 18h45&ndash;22h00 &middot; Dim 19h00&ndash;22h00</span></div></div>
+          <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.81 19.79 19.79 0 01.61 1.18 2 2 0 012.6 0h3a2 2 0 012 1.72c.13 1 .37 1.97.73 2.9a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.18-.98a2 2 0 012.11-.45c.93.36 1.9.6 2.9.73A2 2 0 0122 16.92z"/></svg></span><div class="itxt"><strong data-fr="T&#233;l&#233;phone" data-en="Phone">T&#233;l&#233;phone</strong><a href="tel:+33323741378">+33 3 23 74 13 78</a></div></div>
           <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><div class="itxt"><strong>Email</strong><a href="mailto:lijiani0104@gmail.com">lijiani0104@gmail.com</a></div></div>
-          <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><div class="itxt"><strong>Site web</strong><a href="http://lemysteredubuffet.com" target="_blank" rel="noopener">lemysteredubuffet.com</a></div></div>
         </div>
       </div>
     </div>
@@ -484,10 +478,10 @@
     <h2 data-fr="L&#8217;<em>Exp&#233;rience</em> Myst&#232;re" data-en="The <em>Mystery</em> Experience">L&#8217;<em>Exp&#233;rience</em> Myst&#232;re</h2>
   </div>
   <div class="offer-grid">
-    <div class="oc" data-reveal><span class="oc-num">01</span><h3 data-fr="Buffet &#224; Volont&#233;" data-en="All-You-Can-Eat">Buffet &#224; Volont&#233;</h3><p data-fr="Entr&#233;es vari&#233;es, plats chauds et froids, desserts en libre acc&#232;s. Aucune limite sur les passages, prenez &#224; votre rythme." data-en="Varied starters, hot and cold mains, desserts all in free access. No limit on trips, eat at your own pace.">Entr&#233;es vari&#233;es, plats chauds et froids, desserts en libre acc&#232;s. Aucune limite sur les passages.</p><a href="pages/tarifs.html" class="oc-link" data-fr="Voir les tarifs" data-en="View pricing">Voir les tarifs</a></div>
-    <div class="oc" data-reveal><span class="oc-num">02</span><h3 data-fr="3 Boissons Comprises" data-en="3 Drinks Included">3 Boissons Comprises</h3><p data-fr="Chaque formule inclut 3 boissons par personne : sodas, jus de fruits, vins et bi&#232;res. Cocktails maison, ap&#233;ritifs, digestifs et caf&#233;s disponibles &#224; la carte." data-en="Each formula includes 3 drinks per person: sodas, fruit juices, wines and beers. House cocktails, aperitifs, digestifs and coffees available &agrave; la carte.">Chaque formule inclut 3 boissons par personne : sodas, jus de fruits, vins et bi&#232;res. Cocktails maison, ap&#233;ritifs, digestifs et caf&#233;s disponibles &#224; la carte.</p><a href="assets/F1718%E4%BF%AE%E6%94%B92.pdf" target="_blank" rel="noopener" class="oc-link" data-fr="Voir tous nos boissons" data-en="See all our drinks">Voir tous nos boissons</a></div>
-    <div class="oc" data-reveal><span class="oc-num">03</span><h3 data-fr="Aire de Jeux" data-en="Play Area">Aire de Jeux</h3><p data-fr="Une aire de jeux est disponible dans le restaurant pour le plus grand bonheur des enfants. Profitez de votre repas en toute tranquillit&#233;." data-en="A play area is available inside the restaurant for children. Enjoy your meal in complete peace of mind.">Une aire de jeux est disponible dans le restaurant pour le plus grand bonheur des enfants.</p><a href="pages/contact.html" class="oc-link" data-fr="R&#233;server" data-en="Book">R&#233;server</a></div>
-    <div class="oc" data-reveal><span class="oc-num">04</span><h3 data-fr="Groupes &amp; &#201;v&#233;nements" data-en="Groups &amp; Events">Groupes &amp; &#201;v&#233;nements</h3><p data-fr="Anniversaires, repas d&#8217;affaires, r&#233;unions de famille &#8212; nous accueillons les groupes sur r&#233;servation. Contactez-nous." data-en="Birthdays, business meals, family gatherings &#8212; we welcome groups by reservation.">Anniversaires, repas d&#8217;affaires, r&#233;unions de famille &#8212; nous accueillons les groupes sur r&#233;servation.</p><a href="pages/contact.html" class="oc-link" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a></div>
+    <div class="oc" data-reveal><h3 data-fr="Buffet &#224; Volont&#233;" data-en="All-You-Can-Eat">Buffet &#224; Volont&#233;</h3><p data-fr="Entr&#233;es vari&#233;es, plats chauds et froids, desserts en libre acc&#232;s. Aucune limite sur les passages, prenez &#224; votre rythme." data-en="Varied starters, hot and cold mains, desserts all in free access. No limit on trips, eat at your own pace.">Entr&#233;es vari&#233;es, plats chauds et froids, desserts en libre acc&#232;s. Aucune limite sur les passages.</p><a href="pages/tarifs.html" class="oc-link" data-fr="Voir les tarifs" data-en="View pricing">Voir les tarifs</a></div>
+    <div class="oc" data-reveal><h3 data-fr="3 Boissons Comprises" data-en="3 Drinks Included">3 Boissons Comprises</h3><p data-fr="Chaque formule inclut 3 boissons par personne : sodas, jus de fruits, vins et bi&#232;res. Cocktails maison, ap&#233;ritifs, digestifs et caf&#233;s disponibles &#224; la carte." data-en="Each formula includes 3 drinks per person: sodas, fruit juices, wines and beers. House cocktails, aperitifs, digestifs and coffees available &agrave; la carte.">Chaque formule inclut 3 boissons par personne : sodas, jus de fruits, vins et bi&#232;res. Cocktails maison, ap&#233;ritifs, digestifs et caf&#233;s disponibles &#224; la carte.</p><a href="assets/F1718%E4%BF%AE%E6%94%B92.pdf" target="_blank" rel="noopener" class="oc-link" data-fr="Voir tous nos boissons" data-en="See all our drinks">Voir tous nos boissons</a></div>
+    <div class="oc" data-reveal><h3 data-fr="Aire de Jeux" data-en="Play Area">Aire de Jeux</h3><p data-fr="Une aire de jeux est disponible dans le restaurant pour le plus grand bonheur des enfants. Profitez de votre repas en toute tranquillit&#233;." data-en="A play area is available inside the restaurant for children. Enjoy your meal in complete peace of mind.">Une aire de jeux est disponible dans le restaurant pour le plus grand bonheur des enfants.</p><a href="pages/contact.html" class="oc-link" data-fr="R&#233;server" data-en="Book">R&#233;server</a></div>
+    <div class="oc" data-reveal><h3 data-fr="Groupes &amp; &#201;v&#233;nements" data-en="Groups &amp; Events">Groupes &amp; &#201;v&#233;nements</h3><p data-fr="Anniversaires, repas d&#8217;affaires, r&#233;unions de famille &#8212; nous accueillons les groupes sur r&#233;servation. Contactez-nous." data-en="Birthdays, business meals, family gatherings &#8212; we welcome groups by reservation.">Anniversaires, repas d&#8217;affaires, r&#233;unions de famille &#8212; nous accueillons les groupes sur r&#233;servation.</p><a href="pages/contact.html" class="oc-link" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a></div>
   </div>
 </section>
 
@@ -560,19 +554,10 @@
         <li><a href="mailto:lijiani0104@gmail.com">lijiani0104@gmail.com</a></li>
       </ul>
     </div>
-    <div class="fcol">
-      <h5 data-fr="Tarifs" data-en="Prices">Tarifs</h5>
-      <ul>
-        <li><span data-fr="Adulte midi : d&#232;s 20&#8239;&#8364;" data-en="Adult lunch: from &#8364;20">Adulte midi : d&#232;s 20&#8239;&#8364;</span></li>
-        <li><span data-fr="Adulte soir : d&#232;s 26&#8239;&#8364;" data-en="Adult dinner: from &#8364;26">Adulte soir : d&#232;s 26&#8239;&#8364;</span></li>
-        <li><span data-fr="Enfant 3&#8211;6 ans : d&#232;s 8&#8239;&#8364;" data-en="Child 3&#8211;6: from &#8364;8">Enfant 3&#8211;6 ans : d&#232;s 8&#8239;&#8364;</span></li>
-        <li><span data-fr="Enfant &#8722;3 ans : gratuit" data-en="Child under 3: free">Enfant &#8722;3 ans : gratuit</span></li>
-      </ul>
-    </div>
   </div>
   <div class="footer-bottom">
     <p>&#169; 2026 Le Myst&#232;re du Buffet &#8194;&#8212;&#8194; <a href="pages/mentions-legales.html" data-fr="Mentions l&#233;gales" data-en="Legal notice">Mentions l&#233;gales</a></p>
-    <p>Made by <strong>Ody</strong> &#183; 2026</p>
+    <p>Made by <a href="https://odyssey.ad/partners" target="_blank" rel="noopener"><strong>Ody</strong></a> &#183; 2026</p>
     <div class="footer-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;</span><span>4,0 / 5 &#8212; 1&#8239;070 avis Google</span></div>
   </div>
 </footer>
