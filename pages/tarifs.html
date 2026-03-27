@@ -43,12 +43,32 @@
       "latitude": 49.3815,
       "longitude": 3.3223
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "12:00",
-      "closes": "23:00"
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "14:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "19:30",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "18:45",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "19:00",
+        "closes": "22:00"
+      }
+    ],
     "servesCuisine": "Buffet",
     "priceRange": "€20-€30",
     "aggregateRating": {
@@ -205,7 +225,8 @@
       <ul>
         <li><span>10 Rue Jacques Brel</span></li>
         <li><span>02200 Soissons</span></li>
-        <li><span data-fr="Ouvert 7j/7 d&egrave;s 12h" data-en="Open 7d/7 from 12:00">Ouvert 7j/7 d&egrave;s 12h</span></li>
+        <li><span data-fr="Midi : 12h00&ndash;14h30 (7j/7)" data-en="Lunch: 12:00&ndash;2:30pm (7d/7)">Midi : 12h00&ndash;14h30 (7j/7)</span></li>
+        <li><span data-fr="Soir : d&#232;s 18h45 selon le jour" data-en="Dinner: from 6:45pm depending on day">Soir : d&#232;s 18h45 selon le jour</span></li>
       </ul>
     </div>
   </div>

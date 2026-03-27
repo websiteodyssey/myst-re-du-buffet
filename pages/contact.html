@@ -43,12 +43,32 @@
       "latitude": 49.3815,
       "longitude": 3.3223
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "12:00",
-      "closes": "23:00"
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "14:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "19:30",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "18:45",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "19:00",
+        "closes": "22:00"
+      }
+    ],
     "servesCuisine": "Buffet",
     "priceRange": "€20-€30",
     "aggregateRating": {
@@ -105,7 +125,7 @@
       <div data-reveal>
         <p class="lbl" data-fr="Informations Pratiques" data-en="Practical Information">Informations Pratiques</p>
         <h2 class="sec-title" style="font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:1.4rem" data-fr="Venez nous <em>rendre visite</em>" data-en="Come <em>visit us</em>">Venez nous <em>rendre visite</em></h2>
-        <p class="cinfo-text" data-fr="Nous sommes ouverts 7 jours sur 7 &agrave; partir de 12h00. Pour les groupes, &eacute;v&eacute;nements d&rsquo;entreprise ou anniversaires, contactez-nous directement afin d&rsquo;organiser votre repas dans les meilleures conditions." data-en="We are open 7 days a week from 12:00. For groups, corporate events or birthdays, please contact us directly to arrange your meal in the best possible conditions.">Nous sommes ouverts 7 jours sur 7 &agrave; partir de 12h00. Pour les groupes, &eacute;v&eacute;nements d&rsquo;entreprise ou anniversaires, contactez-nous directement afin d&rsquo;organiser votre repas dans les meilleures conditions.</p>
+        <p class="cinfo-text" data-fr="Ouvert 7j/7 midi et soir. Afin de mieux vous accueillir, les commandes et le r&egrave;glement s&rsquo;effectuent d&eacute;sormais &agrave; l&rsquo;int&eacute;rieur du restaurant. Pour les groupes, &eacute;v&eacute;nements d&rsquo;entreprise ou anniversaires, contactez-nous directement." data-en="Open 7 days a week for lunch and dinner. To better welcome you, orders and payments are now made inside the restaurant. For groups, corporate events or birthdays, please contact us directly.">Ouvert 7j/7 midi et soir. Afin de mieux vous accueillir, les commandes et le r&egrave;glement s&rsquo;effectuent d&eacute;sormais &agrave; l&rsquo;int&eacute;rieur du restaurant. Pour les groupes, &eacute;v&eacute;nements d&rsquo;entreprise ou anniversaires, contactez-nous directement.</p>
         <div class="clist">
           <div class="citem">
             <span class="cico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
@@ -113,7 +133,7 @@
           </div>
           <div class="citem">
             <span class="cico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
-            <div class="citem-txt"><strong data-fr="Horaires" data-en="Hours">Horaires</strong><span data-fr="Tous les jours &agrave; partir de 12h00" data-en="Every day from 12:00">Tous les jours &agrave; partir de 12h00</span></div>
+            <div class="citem-txt"><strong data-fr="Horaires" data-en="Hours">Horaires</strong><span data-fr="Lun&ndash;Dim : 12h00&ndash;14h30<br>Lun&ndash;Ven : 19h30&ndash;22h00<br>Sam : 18h45&ndash;22h00 &middot; Dim : 19h00&ndash;22h00" data-en="Mon&ndash;Sun: 12:00&ndash;2:30pm<br>Mon&ndash;Fri: 7:30&ndash;10pm<br>Sat: 6:45&ndash;10pm &middot; Sun: 7:00&ndash;10pm">Lun&ndash;Dim : 12h00&ndash;14h30<br>Lun&ndash;Ven : 19h30&ndash;22h00<br>Sam : 18h45&ndash;22h00 &middot; Dim : 19h00&ndash;22h00</span></div>
           </div>
           <div class="citem">
             <span class="cico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.81 19.79 19.79 0 01.61 1.18 2 2 0 012.6 0h3a2 2 0 012 1.72c.13 1 .37 1.97.73 2.9a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.18-.98a2 2 0 012.11-.45c.93.36 1.9.6 2.9.73A2 2 0 0122 16.92z"/></svg></span>
@@ -176,7 +196,7 @@
       </ul>
     </div>
     <div class="fcol"><h5>Contact</h5><ul><li><a href="tel:+33323741378">+33 3 23 74 13 78</a></li><li><a href="tel:0618361949">06 18 36 19 49</a></li><li><a href="mailto:lijiani0104@gmail.com">lijiani0104@gmail.com</a></li></ul></div>
-    <div class="fcol"><h5 data-fr="Adresse" data-en="Address">Adresse</h5><ul><li><span>10 Rue Jacques Brel</span></li><li><span>02200 Soissons</span></li><li><span data-fr="Ouvert 7j/7 d&egrave;s 12h" data-en="Open 7d/7 from 12:00">Ouvert 7j/7 d&egrave;s 12h</span></li></ul></div>
+    <div class="fcol"><h5 data-fr="Adresse" data-en="Address">Adresse</h5><ul><li><span>10 Rue Jacques Brel</span></li><li><span>02200 Soissons</span></li><li><span data-fr="Midi : 12h00&ndash;14h30 (7j/7)" data-en="Lunch: 12:00&ndash;2:30pm (7d/7)">Midi : 12h00&ndash;14h30 (7j/7)</span></li><li><span data-fr="Soir : d&#232;s 18h45 selon le jour" data-en="Dinner: from 6:45pm depending on day">Soir : d&#232;s 18h45 selon le jour</span></li></ul></div>
   </div>
   <div class="footer-bottom">
     <p>&copy; 2026 Le Myst&egrave;re du Buffet &ensp;&mdash;&ensp; <a href="mentions-legales.html" data-fr="Mentions l&eacute;gales" data-en="Legal notice">Mentions l&eacute;gales</a></p>

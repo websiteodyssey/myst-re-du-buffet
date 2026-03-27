@@ -43,12 +43,32 @@
       "latitude": 49.3815,
       "longitude": 3.3223
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "12:00",
-      "closes": "23:00"
-    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "14:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "19:30",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "18:45",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "19:00",
+        "closes": "22:00"
+      }
+    ],
     "servesCuisine": "Buffet",
     "priceRange": "€20-€30",
     "aggregateRating": {
@@ -240,7 +260,7 @@
     .offer-hd { text-align: center; max-width: 540px; margin: 0 auto 5rem; }
     .offer-hd .lbl { justify-content: center; }
     .offer-hd h2 { font-size: clamp(2rem,4vw,3.2rem); }
-    .offer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: var(--mw); margin: 0 auto; }
+    .offer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; max-width: var(--mw); margin: 0 auto; }
     .oc {
       background: rgba(12,26,74,.42); border: 1px solid var(--border2);
       border-radius: 3px; padding: 2.8rem 2.2rem;
@@ -269,6 +289,16 @@
     .tprev-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; max-width: var(--mw); margin: 0 auto; }
     .tprev-intro h2 { font-size: clamp(1.9rem,3.5vw,3rem); margin-bottom: 1.1rem; }
     .tprev-intro p { font-size: .88rem; color: var(--dim); line-height: 1.9; margin-bottom: 2rem; }
+    .tprev-highlights { display: flex; flex-direction: column; gap: .9rem; margin-top: 1.5rem; margin-bottom: 2.2rem; }
+    .tprev-hl {
+      display: flex; align-items: center; gap: 1rem;
+      background: rgba(0,212,212,.06); border: 1px solid rgba(0,212,212,.18);
+      border-radius: 3px; padding: 1rem 1.3rem;
+    }
+    .tprev-hl-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1; }
+    .tprev-hl p { font-size: .88rem; color: var(--white); line-height: 1.6; margin: 0; }
+    .tprev-hl-link { display: inline-block; margin-top: .45rem; font-size: .7rem; font-weight: 500; letter-spacing: .1em; color: var(--teal); transition: color .2s; }
+    .tprev-hl-link:hover { color: var(--teal2); }
     .tprev-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
     .tpc {
       background: rgba(12,26,74,.48); border: 1px solid var(--border2);
@@ -301,6 +331,19 @@
     #cta h2 { font-size: clamp(2rem,4vw,3rem); margin-bottom: 1.2rem; }
     #cta p { font-size: .88rem; color: var(--dim); line-height: 1.95; margin-bottom: 2.6rem; }
     .cta-btns { display: flex; gap: 1.1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* INFO BANNER */
+    .info-banner {
+      position: relative; z-index: 2;
+      background: linear-gradient(135deg, rgba(0,212,212,.12), rgba(0,212,212,.04));
+      border-top: 1px solid rgba(0,212,212,.25);
+      border-bottom: 1px solid rgba(0,212,212,.25);
+      padding: 1.2rem 2rem;
+    }
+    .info-banner p {
+      font-size: .82rem; font-weight: 500; letter-spacing: .06em;
+      color: var(--teal); line-height: 1.6;
+    }
 
     /* RESPONSIVE HOME */
     @media (max-width: 1100px) {
@@ -392,13 +435,19 @@
   </div>
 </section>
 
+<div class="info-banner" data-reveal>
+  <div class="wrap" style="text-align:center">
+    <p data-fr="Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais &#224; l&#8217;int&#233;rieur du restaurant." data-en="To better welcome you, orders and payments are now made inside the restaurant.">Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais &#224; l&#8217;int&#233;rieur du restaurant.</p>
+  </div>
+</div>
+
 <section id="about">
   <div class="about-grid">
     <div class="about-text" data-reveal>
       <p class="lbl" data-fr="Le Restaurant" data-en="The Restaurant">Le Restaurant</p>
       <h2 style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.5rem" data-fr="Un buffet <em>g&#233;n&#233;reux</em>,<br>un cadre <em>unique</em>" data-en="A <em>generous</em> buffet,<br>a <em>unique</em> setting">Un buffet <em>g&#233;n&#233;reux</em>,<br>un cadre <em>unique</em></h2>
       <p data-fr="Bienvenue au Myst&#232;re du Buffet, restaurant buffet &#224; volont&#233; au c&#339;ur de Soissons. Entr&#233;es, plats chauds et froids, desserts &#8212; tout en libre acc&#232;s, &#224; votre rythme." data-en="Welcome to Le Myst&#232;re du Buffet, all-you-can-eat buffet in Soissons. Starters, hot and cold mains, desserts &#8212; all freely accessible at your own pace.">Bienvenue au Myst&#232;re du Buffet, restaurant buffet &#224; volont&#233; au c&#339;ur de Soissons. Entr&#233;es, plats chauds et froids, desserts &#8212; tout en libre acc&#232;s, &#224; votre rythme.</p>
-      <p data-fr="Un cadre marin unique, avec ses luminaires bleutés, ses miroirs et ses reflets scintillants. Pour les repas en famille, entre amis ou entre collègues." data-en="A unique marine setting, with blue-tinted lighting, mirrors and shimmering reflections. For meals with family, friends or colleagues.">Un cadre marin unique, avec ses luminaires bleutés, ses miroirs et ses reflets scintillants. Pour les repas en famille, entre amis ou entre collègues.</p>
+
       <div class="stats">
         <div class="stat" data-reveal><span class="sn">4,0&thinsp;/&thinsp;5</span><span class="sl" data-fr="Note Google" data-en="Google Rating">Note Google</span></div>
         <div class="stat" data-reveal><span class="sn">1&#8239;070+</span><span class="sl" data-fr="Avis clients" data-en="Reviews">Avis clients</span></div>
@@ -411,7 +460,7 @@
         <div class="icard-top"><img src="assets/images/logo.png" alt="Le Myst&#232;re du Buffet"></div>
         <div class="icard-body">
           <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span><div class="itxt"><strong data-fr="Adresse" data-en="Address">Adresse</strong>10 Rue Jacques Brel, 02200 Soissons</div></div>
-          <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div class="itxt"><strong data-fr="Horaires" data-en="Hours">Horaires</strong><span data-fr="Tous les jours &#224; partir de 12h00" data-en="Every day from 12:00">Tous les jours &#224; partir de 12h00</span></div></div>
+          <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div class="itxt"><strong data-fr="Horaires" data-en="Hours">Horaires</strong><span data-fr="Lun&ndash;Dim : 12h00&ndash;14h30 &middot; Lun&ndash;Ven : 19h30&ndash;22h00<br>Sam : 18h45&ndash;22h00 &middot; Dim : 19h00&ndash;22h00" data-en="Mon&ndash;Sun: 12:00&ndash;2:30pm &middot; Mon&ndash;Fri: 7:30&ndash;10pm<br>Sat: 6:45&ndash;10pm &middot; Sun: 7:00&ndash;10pm">Lun&ndash;Dim : 12h00&ndash;14h30 &middot; Lun&ndash;Ven : 19h30&ndash;22h00<br>Sam : 18h45&ndash;22h00 &middot; Dim : 19h00&ndash;22h00</span></div></div>
           <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.68 9.81 19.79 19.79 0 01.61 1.18 2 2 0 012.6 0h3a2 2 0 012 1.72c.13 1 .37 1.97.73 2.9a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.18-.98a2 2 0 012.11-.45c.93.36 1.9.6 2.9.73A2 2 0 0122 16.92z"/></svg></span><div class="itxt"><strong data-fr="T&#233;l&#233;phone" data-en="Phone">T&#233;l&#233;phone</strong><a href="tel:+33323741378">+33 3 23 74 13 78</a> &#8212; <a href="tel:0618361949">06 18 36 19 49</a></div></div>
           <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><div class="itxt"><strong>Email</strong><a href="mailto:lijiani0104@gmail.com">lijiani0104@gmail.com</a></div></div>
           <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span><div class="itxt"><strong>Site web</strong><a href="http://lemysteredubuffet.com" target="_blank" rel="noopener">lemysteredubuffet.com</a></div></div>
@@ -436,8 +485,9 @@
   </div>
   <div class="offer-grid">
     <div class="oc" data-reveal><span class="oc-num">01</span><h3 data-fr="Buffet &#224; Volont&#233;" data-en="All-You-Can-Eat">Buffet &#224; Volont&#233;</h3><p data-fr="Entr&#233;es vari&#233;es, plats chauds et froids, desserts en libre acc&#232;s. Aucune limite sur les passages, prenez &#224; votre rythme." data-en="Varied starters, hot and cold mains, desserts all in free access. No limit on trips, eat at your own pace.">Entr&#233;es vari&#233;es, plats chauds et froids, desserts en libre acc&#232;s. Aucune limite sur les passages.</p><a href="pages/tarifs.html" class="oc-link" data-fr="Voir les tarifs" data-en="View pricing">Voir les tarifs</a></div>
-    <div class="oc" data-reveal><span class="oc-num">02</span><h3 data-fr="Cocktails &amp; Boissons" data-en="Cocktails &amp; Drinks">Cocktails &amp; Boissons</h3><p data-fr="3 boissons incluses par personne (sodas, jus, vins, bi&#232;res). Ap&#233;ritifs, cocktails maison alcolis&#233;s et sans alcool, digestifs et caf&#233;s &#224; la carte." data-en="3 drinks included per person (sodas, juices, wines, beers). Aperitifs, cocktails, digestifs and coffees available.">3 boissons incluses par personne. Ap&#233;ritifs, cocktails maison, digestifs et caf&#233;s &#224; la carte.</p><a href="pages/menu.html" class="oc-link" data-fr="Voir la carte" data-en="See the menu">Voir la carte</a></div>
-    <div class="oc" data-reveal><span class="oc-num">03</span><h3 data-fr="Groupes &amp; &#201;v&#233;nements" data-en="Groups &amp; Events">Groupes &amp; &#201;v&#233;nements</h3><p data-fr="Anniversaires, repas d&#8217;affaires, r&#233;unions de famille &#8212; nous accueillons les groupes sur r&#233;servation. Contactez-nous." data-en="Birthdays, business meals, family gatherings &#8212; we welcome groups by reservation.">Anniversaires, repas d&#8217;affaires, r&#233;unions de famille &#8212; nous accueillons les groupes sur r&#233;servation.</p><a href="pages/contact.html" class="oc-link" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a></div>
+    <div class="oc" data-reveal><span class="oc-num">02</span><h3 data-fr="3 Boissons Comprises" data-en="3 Drinks Included">3 Boissons Comprises</h3><p data-fr="Chaque formule inclut 3 boissons par personne : sodas, jus de fruits, vins et bi&#232;res. Cocktails maison, ap&#233;ritifs, digestifs et caf&#233;s disponibles &#224; la carte." data-en="Each formula includes 3 drinks per person: sodas, fruit juices, wines and beers. House cocktails, aperitifs, digestifs and coffees available &agrave; la carte.">Chaque formule inclut 3 boissons par personne : sodas, jus de fruits, vins et bi&#232;res. Cocktails maison, ap&#233;ritifs, digestifs et caf&#233;s disponibles &#224; la carte.</p><a href="assets/F1718%E4%BF%AE%E6%94%B92.pdf" target="_blank" rel="noopener" class="oc-link" data-fr="Voir tous nos boissons" data-en="See all our drinks">Voir tous nos boissons</a></div>
+    <div class="oc" data-reveal><span class="oc-num">03</span><h3 data-fr="Aire de Jeux" data-en="Play Area">Aire de Jeux</h3><p data-fr="Une aire de jeux est disponible dans le restaurant pour le plus grand bonheur des enfants. Profitez de votre repas en toute tranquillit&#233;." data-en="A play area is available inside the restaurant for children. Enjoy your meal in complete peace of mind.">Une aire de jeux est disponible dans le restaurant pour le plus grand bonheur des enfants.</p><a href="pages/contact.html" class="oc-link" data-fr="R&#233;server" data-en="Book">R&#233;server</a></div>
+    <div class="oc" data-reveal><span class="oc-num">04</span><h3 data-fr="Groupes &amp; &#201;v&#233;nements" data-en="Groups &amp; Events">Groupes &amp; &#201;v&#233;nements</h3><p data-fr="Anniversaires, repas d&#8217;affaires, r&#233;unions de famille &#8212; nous accueillons les groupes sur r&#233;servation. Contactez-nous." data-en="Birthdays, business meals, family gatherings &#8212; we welcome groups by reservation.">Anniversaires, repas d&#8217;affaires, r&#233;unions de famille &#8212; nous accueillons les groupes sur r&#233;servation.</p><a href="pages/contact.html" class="oc-link" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a></div>
   </div>
 </section>
 
@@ -446,7 +496,19 @@
     <div data-reveal>
       <p class="lbl" data-fr="Tarifs" data-en="Pricing">Tarifs</p>
       <h2 class="tprev-intro" data-fr="Nos <em>Prix</em> Adultes" data-en="Our Adult <em>Prices</em>">Nos <em>Prix</em> Adultes</h2>
-      <p class="tprev-intro" data-fr="Buffet &#224; volont&#233; inclus. Maximum 3 boissons par personne (sodas, jus, vins, bi&#232;res)." data-en="All-you-can-eat included. Maximum 3 drinks per person (sodas, juices, wines, beers).">Buffet &#224; volont&#233; inclus. Maximum 3 boissons par personne.</p>
+      <div class="tprev-highlights">
+        <div class="tprev-hl">
+          <span class="tprev-hl-icon">&#127864;</span>
+          <div>
+            <p data-fr="3 boissons comprises dans chaque formule (sodas, jus de fruits, vins, bi&#232;res)" data-en="3 drinks included in every formula (sodas, fruit juices, wines, beers)">3 boissons comprises dans chaque formule (sodas, jus de fruits, vins, bi&#232;res)</p>
+            <a href="assets/F1718%E4%BF%AE%E6%94%B92.pdf" target="_blank" rel="noopener" class="tprev-hl-link" data-fr="Voir tous nos boissons &#8594;" data-en="See all our drinks &#8594;">Voir tous nos boissons &#8594;</a>
+          </div>
+        </div>
+        <div class="tprev-hl">
+          <span class="tprev-hl-icon">&#127922;</span>
+          <p data-fr="Aire de jeux disponible pour les enfants" data-en="Play area available for children">Aire de jeux disponible pour les enfants</p>
+        </div>
+      </div>
       <a href="pages/tarifs.html" class="btn btn-t" data-fr="Tous les Tarifs" data-en="Full Pricing">Tous les Tarifs</a>
     </div>
     <div data-reveal>
@@ -463,7 +525,7 @@
   <div class="cta-in" data-reveal>
     <p class="lbl" data-fr="R&#233;servation" data-en="Reservation">R&#233;servation</p>
     <h2 data-fr="R&#233;servez votre <em>Table</em>" data-en="Reserve your <em>Table</em>">R&#233;servez votre <em>Table</em></h2>
-    <p data-fr="Ouvert tous les jours &#224; partir de 12h00. Id&#233;al pour les repas en famille, entre amis ou entre coll&#232;gues." data-en="Open every day from 12:00. Ideal for family meals, dinners with friends or colleagues.">Ouvert tous les jours &#224; partir de 12h00. Id&#233;al pour les repas en famille, entre amis ou entre coll&#232;gues.</p>
+    <p data-fr="Ouvert 7j/7 midi et soir. 3 boissons comprises dans chaque formule. Id&#233;al pour les repas en famille, entre amis ou entre coll&#232;gues." data-en="Open 7 days a week, lunch and dinner. 3 drinks included in every formula. Ideal for family meals, dinners with friends or colleagues.">Ouvert 7j/7 midi et soir. 3 boissons comprises dans chaque formule. Id&#233;al pour les repas en famille, entre amis ou entre coll&#232;gues.</p>
     <div class="cta-btns">
       <a href="pages/contact.html" class="btn btn-t" data-fr="R&#233;server maintenant" data-en="Book Now">R&#233;server maintenant</a>
       <a href="pages/tarifs.html" class="btn btn-o" data-fr="Consulter les Tarifs" data-en="View Pricing">Consulter les Tarifs</a>
@@ -475,7 +537,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="logo-row"><img src="assets/images/logo.png" alt="Logo"><span>Le Myst&#232;re du Buffet</span></div>
-      <p data-fr="Restaurant buffet &#224; volont&#233; &#224; Soissons. Entr&#233;es, plats et desserts illimit&#233;s dans un cadre marin unique. Ouvert 7j/7 &#224; partir de 12h." data-en="All-you-can-eat buffet in Soissons. Unlimited starters, mains and desserts in a unique marine setting. Open 7 days from 12:00.">Restaurant buffet &#224; volont&#233; &#224; Soissons. Entr&#233;es, plats et desserts illimit&#233;s dans un cadre marin unique. Ouvert 7j/7 &#224; partir de 12h.</p>
+      <p data-fr="Restaurant buffet &#224; volont&#233; &#224; Soissons. Entr&#233;es, plats et desserts illimit&#233;s, 3 boissons comprises. Ouvert 7j/7 midi et soir." data-en="All-you-can-eat buffet in Soissons. Unlimited starters, mains and desserts, 3 drinks included. Open 7 days, lunch and dinner.">Restaurant buffet &#224; volont&#233; &#224; Soissons. Entr&#233;es, plats et desserts illimit&#233;s, 3 boissons comprises. Ouvert 7j/7 midi et soir.</p>
     </div>
     <div class="fcol">
       <h5 data-fr="Navigation" data-en="Navigation">Navigation</h5>
@@ -490,7 +552,8 @@
     <div class="fcol">
       <h5 data-fr="Informations" data-en="Information">Informations</h5>
       <ul>
-        <li><span data-fr="Ouvert 7j/7 d&#232;s 12h00" data-en="Open 7d/7 from 12:00">Ouvert 7j/7 d&#232;s 12h00</span></li>
+        <li><span data-fr="Midi : 12h00&ndash;14h30 (7j/7)" data-en="Lunch: 12:00&ndash;2:30pm (7d/7)">Midi : 12h00&ndash;14h30 (7j/7)</span></li>
+        <li><span data-fr="Soir : d&#232;s 18h45 selon le jour" data-en="Dinner: from 6:45pm depending on day">Soir : d&#232;s 18h45 selon le jour</span></li>
         <li><span>10 Rue Jacques Brel</span></li>
         <li><span>02200 Soissons, France</span></li>
         <li><a href="tel:+33323741378">+33 3 23 74 13 78</a></li>
