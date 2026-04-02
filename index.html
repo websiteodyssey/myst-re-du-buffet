@@ -96,23 +96,151 @@
       position: relative; height: 100vh; min-height: 620px;
       display: flex; align-items: center; justify-content: center;
       text-align: center; overflow: hidden; z-index: 1;
+      background: url('assets/images/bluuee.png') center center / cover no-repeat;
     }
-    .hero-photo {
-      position: absolute; inset: 0;
-      background: url('assets/images/主页封面图2.png') center center / cover no-repeat;
-    }
-    .hero-fade {
-      position: absolute; inset: 0;
+    #hero::before {
+      content: ''; position: absolute; inset: 0;
       background:
-        linear-gradient(180deg,
-          rgba(3,9,24,.6) 0%,
-          rgba(3,9,24,.08) 40%,
-          rgba(3,9,24,.92) 100%),
-        radial-gradient(ellipse at 50% 52%, rgba(0,80,160,.2) 0%, transparent 58%);
+        radial-gradient(ellipse at 30% 40%, rgba(0,180,220,.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(0,140,200,.14) 0%, transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(0,212,212,.1) 0%, transparent 40%),
+        radial-gradient(ellipse at 15% 70%, rgba(0,200,180,.08) 0%, transparent 35%),
+        radial-gradient(ellipse at 85% 30%, rgba(0,160,220,.1) 0%, transparent 40%);
+      animation: caustics 8s ease-in-out infinite alternate;
+    }
+    #hero::after {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background:
+        linear-gradient(165deg, rgba(0,200,255,.06) 0%, transparent 40%),
+        linear-gradient(195deg, rgba(0,180,220,.04) 0%, transparent 35%),
+        linear-gradient(150deg, rgba(0,220,240,.05) 10%, transparent 50%);
+      animation: lightrays 10s ease-in-out infinite alternate;
+    }
+    .hero-wave {
+      position: absolute; bottom: -2px; left: 0; width: 100%; z-index: 1;
+      overflow: hidden; line-height: 0;
+    }
+    .hero-wave svg { width: 200%; height: 80px; animation: wave-move 8s linear infinite; }
+    .hero-wave svg path { fill: #020a2a; }
+    .hero-bubble {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.15), rgba(0,200,220,.06));
+      border: 1px solid rgba(255,255,255,.08);
+      animation: bubble-rise linear infinite;
+    }
+    .hero-bubble:nth-child(1) { width: 8px; height: 8px; left: 12%; bottom: -10px; animation-duration: 9s; animation-delay: 0s; }
+    .hero-bubble:nth-child(2) { width: 5px; height: 5px; left: 28%; bottom: -10px; animation-duration: 11s; animation-delay: 2s; }
+    .hero-bubble:nth-child(3) { width: 12px; height: 12px; left: 45%; bottom: -10px; animation-duration: 13s; animation-delay: 1s; }
+    .hero-bubble:nth-child(4) { width: 6px; height: 6px; left: 62%; bottom: -10px; animation-duration: 10s; animation-delay: 3s; }
+    .hero-bubble:nth-child(5) { width: 9px; height: 9px; left: 78%; bottom: -10px; animation-duration: 12s; animation-delay: 0.5s; }
+    .hero-bubble:nth-child(6) { width: 4px; height: 4px; left: 90%; bottom: -10px; animation-duration: 14s; animation-delay: 4s; }
+    .hero-bubble:nth-child(7) { width: 7px; height: 7px; left: 35%; bottom: -10px; animation-duration: 10s; animation-delay: 5s; }
+    .hero-bubble:nth-child(8) { width: 10px; height: 10px; left: 55%; bottom: -10px; animation-duration: 11s; animation-delay: 2.5s; }
+    .hero-bubble:nth-child(9) { width: 6px; height: 6px; left: 8%; bottom: -10px; animation-duration: 13s; animation-delay: 1.5s; }
+    .hero-bubble:nth-child(10) { width: 11px; height: 11px; left: 22%; bottom: -10px; animation-duration: 9.5s; animation-delay: 3.5s; }
+    .hero-bubble:nth-child(11) { width: 4px; height: 4px; left: 40%; bottom: -10px; animation-duration: 14s; animation-delay: 6s; }
+    .hero-bubble:nth-child(12) { width: 7px; height: 7px; left: 52%; bottom: -10px; animation-duration: 10.5s; animation-delay: 4.5s; }
+    .hero-bubble:nth-child(13) { width: 5px; height: 5px; left: 68%; bottom: -10px; animation-duration: 12.5s; animation-delay: 1s; }
+    .hero-bubble:nth-child(14) { width: 9px; height: 9px; left: 82%; bottom: -10px; animation-duration: 11.5s; animation-delay: 5.5s; }
+    .hero-bubble:nth-child(15) { width: 3px; height: 3px; left: 95%; bottom: -10px; animation-duration: 13.5s; animation-delay: 7s; }
+    @keyframes caustics {
+      0% { opacity: .5; transform: scale(1) rotate(0deg); }
+      100% { opacity: 1; transform: scale(1.08) rotate(.5deg); }
+    }
+    @keyframes lightrays {
+      0% { opacity: .4; transform: translateX(-3%); }
+      100% { opacity: .8; transform: translateX(3%); }
+    }
+    @keyframes bubble-rise {
+      0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+      10% { opacity: .6; }
+      90% { opacity: .3; }
+      100% { transform: translateY(-100vh) translateX(20px) scale(.6); opacity: 0; }
+    }
+    @keyframes wave-move {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .hero-star {
+      position: absolute; pointer-events: none; border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,180,200,.5), rgba(0,140,170,.2) 50%, transparent 70%);
+      box-shadow: 0 0 4px 1px rgba(0,160,180,.2), 0 0 8px 2px rgba(0,140,170,.08);
+      animation: twinkle ease-in-out infinite;
+    }
+    .hero-star:nth-child(16) { width: 4px; height: 4px; top: 12%; left: 10%; animation-duration: 3s; animation-delay: 0s; }
+    .hero-star:nth-child(17) { width: 3px; height: 3px; top: 28%; left: 25%; animation-duration: 4s; animation-delay: 1.2s; }
+    .hero-star:nth-child(18) { width: 4px; height: 4px; top: 8%; left: 42%; animation-duration: 3.5s; animation-delay: .5s; }
+    .hero-star:nth-child(19) { width: 3px; height: 3px; top: 45%; left: 58%; animation-duration: 4.5s; animation-delay: 2s; }
+    .hero-star:nth-child(20) { width: 3px; height: 3px; top: 18%; left: 75%; animation-duration: 3.2s; animation-delay: .8s; }
+    .hero-star:nth-child(21) { width: 4px; height: 4px; top: 55%; left: 88%; animation-duration: 4.2s; animation-delay: 1.5s; }
+    .hero-star:nth-child(22) { width: 3px; height: 3px; top: 38%; left: 15%; animation-duration: 3.8s; animation-delay: 2.5s; }
+    .hero-star:nth-child(23) { width: 3px; height: 3px; top: 65%; left: 50%; animation-duration: 5s; animation-delay: .3s; }
+    .hero-star:nth-child(24) { width: 4px; height: 4px; top: 22%; left: 65%; animation-duration: 3.6s; animation-delay: 1.8s; }
+    .hero-star:nth-child(25) { width: 3px; height: 3px; top: 50%; left: 35%; animation-duration: 4.8s; animation-delay: 3s; }
+    .hero-star:nth-child(26) { width: 3px; height: 3px; top: 72%; left: 70%; animation-duration: 3.4s; animation-delay: .6s; }
+    .hero-star:nth-child(27) { width: 4px; height: 4px; top: 35%; left: 92%; animation-duration: 4.4s; animation-delay: 2.2s; }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0; transform: scale(.5); }
+      30% { opacity: .4; transform: scale(1.2); }
+      50% { opacity: .25; transform: scale(1); }
+      70% { opacity: .45; transform: scale(1.1); }
+    }
+    .hero-fish {
+      position: absolute; pointer-events: none; z-index: 1;
+      opacity: .25;
+      animation: swim linear infinite;
+    }
+    .hero-fish svg { width: 100%; height: 100%; }
+    .hero-fish svg path { fill: rgba(120,180,220,.8); }
+    .hero-fish:nth-child(28) { width: 80px; height: 40px; top: 30%; animation-duration: 18s; animation-delay: 0s; }
+    .hero-fish:nth-child(29) { width: 56px; height: 28px; top: 55%; animation-duration: 22s; animation-delay: 4s; opacity: .18; }
+    .hero-fish:nth-child(30) { width: 70px; height: 35px; top: 42%; animation-duration: 20s; animation-delay: 8s; opacity: .22; }
+    .hero-fish:nth-child(31) { width: 48px; height: 24px; top: 68%; animation-duration: 25s; animation-delay: 2s; opacity: .15; }
+    .hero-fish:nth-child(32) { width: 64px; height: 32px; top: 20%; animation-duration: 23s; animation-delay: 10s; opacity: .2; }
+    .hero-fish:nth-child(33) { width: 44px; height: 22px; top: 15%; animation-duration: 26s; animation-delay: 6s; opacity: .15; }
+    .hero-fish:nth-child(34) { width: 60px; height: 30px; top: 75%; animation-duration: 19s; animation-delay: 12s; opacity: .22; }
+    .hero-fish:nth-child(35) { width: 52px; height: 26px; top: 48%; animation-duration: 24s; animation-delay: 3s; opacity: .18; }
+    .hero-fish:nth-child(36) { width: 72px; height: 36px; top: 60%; animation-duration: 21s; animation-delay: 7s; opacity: .2; }
+    .hero-fish:nth-child(37) { width: 40px; height: 20px; top: 35%; animation-duration: 27s; animation-delay: 14s; opacity: .14; }
+    @keyframes swim {
+      0% { right: -60px; transform: translateY(0); }
+      25% { transform: translateY(-12px); }
+      50% { transform: translateY(8px); }
+      75% { transform: translateY(-6px); }
+      100% { right: 105%; transform: translateY(0); }
+    }
+    .hero-seaweed {
+      position: absolute; bottom: 0; left: 0; width: 100%; height: 120px; z-index: 1; pointer-events: none;
+    }
+    .hero-seaweed .algue {
+      position: absolute; bottom: 0; width: 18px;
+      transform-origin: bottom center;
+      animation: sway ease-in-out infinite;
+    }
+    .hero-seaweed .algue path { fill: #0a3a5c; }
+    .hero-seaweed .algue:nth-child(odd) path { fill: #0d4a6e; }
+    .hero-seaweed .algue:nth-child(1) { left: 3%; height: 90px; animation-duration: 4s; }
+    .hero-seaweed .algue:nth-child(2) { left: 8%; height: 70px; animation-duration: 3.5s; animation-delay: .5s; }
+    .hero-seaweed .algue:nth-child(3) { left: 14%; height: 100px; animation-duration: 4.5s; animation-delay: .2s; }
+    .hero-seaweed .algue:nth-child(4) { left: 20%; height: 60px; animation-duration: 3.8s; animation-delay: 1s; }
+    .hero-seaweed .algue:nth-child(5) { left: 27%; height: 85px; animation-duration: 4.2s; animation-delay: .7s; }
+    .hero-seaweed .algue:nth-child(6) { left: 35%; height: 75px; animation-duration: 3.6s; animation-delay: 1.2s; }
+    .hero-seaweed .algue:nth-child(7) { left: 43%; height: 95px; animation-duration: 4.8s; animation-delay: .3s; }
+    .hero-seaweed .algue:nth-child(8) { left: 50%; height: 65px; animation-duration: 3.4s; animation-delay: .9s; }
+    .hero-seaweed .algue:nth-child(9) { left: 58%; height: 80px; animation-duration: 4.1s; animation-delay: 1.5s; }
+    .hero-seaweed .algue:nth-child(10) { left: 65%; height: 105px; animation-duration: 4.6s; animation-delay: .4s; }
+    .hero-seaweed .algue:nth-child(11) { left: 72%; height: 70px; animation-duration: 3.7s; animation-delay: 1.1s; }
+    .hero-seaweed .algue:nth-child(12) { left: 80%; height: 90px; animation-duration: 4.3s; animation-delay: .6s; }
+    .hero-seaweed .algue:nth-child(13) { left: 87%; height: 60px; animation-duration: 3.9s; animation-delay: 1.3s; }
+    .hero-seaweed .algue:nth-child(14) { left: 93%; height: 80px; animation-duration: 4.4s; animation-delay: .8s; }
+    @keyframes sway {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
     }
     .hero-c {
       position: relative; z-index: 2;
       padding: 0 1.5rem; max-width: 860px; width: 100%;
+      display: flex; flex-direction: column; align-items: center; gap: 2.5rem;
     }
     .hero-badge {
       display: inline-flex; align-items: center; gap: .55rem;
@@ -123,7 +251,7 @@
       background: rgba(0,212,212,.05);
     }
     .hero-logo {
-      width: 90px; height: 90px; border-radius: 50%;
+      width: 380px; height: 380px; border-radius: 50%;
       margin: 0 auto 1.8rem;
       border: 1px solid rgba(0,212,212,.3);
       box-shadow: 0 0 50px rgba(0,212,212,.24), 0 0 14px rgba(0,212,212,.16);
@@ -131,7 +259,7 @@
     .hero-title {
       font-size: clamp(3rem, 9.5vw, 6.5rem);
       font-weight: 300; font-style: italic;
-      line-height: 1.04; letter-spacing: -.01em; margin-bottom: .55rem;
+      line-height: 1.04; letter-spacing: -.01em; margin-bottom: 2.5rem;
     }
     .hero-title .accent { color: var(--teal); }
     .hero-sub {
@@ -413,11 +541,49 @@
 </nav>
 
 <section id="hero">
-  <div class="hero-photo"></div>
-  <div class="hero-fade"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-star"></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-fish"><svg viewBox="0 0 60 30"><path d="M45,15 C45,8 38,2 28,2 C18,2 8,8 2,15 C8,22 18,28 28,28 C38,28 45,22 45,15 Z M45,15 L58,6 L55,15 L58,24 Z"/></svg></div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z"/></svg>
+  </div>
   <div class="hero-c">
-    <img class="hero-logo" src="assets/images/logo.png" alt="Le Myst&#232;re du Buffet">
     <h1 class="hero-title">Le Myst&#232;re<br><span class="accent" data-fr="du Buffet" data-en="of the Buffet">du Buffet</span></h1>
+    <img class="hero-logo" src="assets/images/logo.png" alt="Le Myst&#232;re du Buffet">
     <div class="hero-btns">
       <a href="pages/tarifs.html" class="btn btn-t" data-fr="Voir les Tarifs" data-en="View Pricing">Voir les Tarifs</a>
       <a href="pages/contact.html" class="btn btn-o" data-fr="R&#233;server une Table" data-en="Book a Table">R&#233;server une Table</a>
@@ -428,12 +594,6 @@
     <span data-fr="D&#233;couvrir" data-en="Discover">D&#233;couvrir</span>
   </div>
 </section>
-
-<div class="info-banner" data-reveal>
-  <div class="wrap" style="text-align:center">
-    <p data-fr="Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais d&#232;s l&#8217;entr&#233;e du restaurant." data-en="To better welcome you, orders and payments are now made at the entrance of the restaurant.">Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais d&#232;s l&#8217;entr&#233;e du restaurant.</p>
-  </div>
-</div>
 
 <section id="about">
   <div class="about-grid">
@@ -459,6 +619,12 @@
           <div class="irow"><span class="iico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span><div class="itxt"><strong>Email</strong><a href="mailto:lijiani0104@gmail.com">lijiani0104@gmail.com</a></div></div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div class="info-banner" data-reveal>
+    <div class="wrap" style="text-align:center">
+      <p data-fr="Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais d&#232;s l&#8217;entr&#233;e du restaurant." data-en="To better welcome you, orders and payments are now made at the entrance of the restaurant.">Afin de mieux vous accueillir, les commandes et le r&#232;glement s&#8217;effectuent d&#233;sormais d&#232;s l&#8217;entr&#233;e du restaurant.</p>
     </div>
   </div>
 </section>
