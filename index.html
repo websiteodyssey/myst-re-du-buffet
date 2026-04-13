@@ -96,7 +96,7 @@
       position: relative; height: 100vh; min-height: 620px;
       display: flex; align-items: center; justify-content: center;
       text-align: center; overflow: hidden; z-index: 1;
-      background: url('assets/images/IMG_1432.JPG') center center / cover no-repeat;
+      background: url('assets/images/MHW_4089.JPEG') center center / cover no-repeat;
     }
     #hero::before {
       content: ''; position: absolute; inset: 0;
@@ -105,7 +105,8 @@
         radial-gradient(ellipse at 70% 60%, rgba(0,140,200,.14) 0%, transparent 45%),
         radial-gradient(circle at 50% 80%, rgba(0,212,212,.1) 0%, transparent 40%),
         radial-gradient(ellipse at 15% 70%, rgba(0,200,180,.08) 0%, transparent 35%),
-        radial-gradient(ellipse at 85% 30%, rgba(0,160,220,.1) 0%, transparent 40%);
+        radial-gradient(ellipse at 85% 30%, rgba(0,160,220,.1) 0%, transparent 40%),
+        linear-gradient(to bottom, rgba(2,10,42,.62) 0%, rgba(2,10,42,.48) 50%, rgba(2,10,42,.65) 100%);
       animation: caustics 8s ease-in-out infinite alternate;
     }
     #hero::after {
@@ -258,6 +259,7 @@
       margin: 0 auto 1.8rem;
       border: 1px solid rgba(0,212,212,.3);
       box-shadow: 0 0 50px rgba(0,212,212,.24), 0 0 14px rgba(0,212,212,.16);
+      background: rgba(2,10,42,.45);
     }
     .hero-title {
       font-size: clamp(2.4rem, 7vw, 4.5rem);
@@ -269,7 +271,7 @@
       font-size: .72rem; letter-spacing: .38em; text-transform: uppercase;
       color: var(--dim); margin-bottom: 3.2rem;
     }
-    .hero-btns { display: flex; gap: 1.1rem; justify-content: center; flex-wrap: wrap; }
+    .hero-btns { display: flex; gap: 1.1rem; justify-content: center; flex-wrap: wrap; margin-top: 4rem; }
     .hero-scroll {
       position: absolute; bottom: 2.8rem; left: 50%;
       transform: translateX(-50%); z-index: 2;
@@ -586,7 +588,7 @@
   </div>
   <div class="hero-c">
     <h1 class="hero-title" style="display:none">Le Myst&#232;re<br><span class="accent" data-fr="du Buffet" data-en="of the Buffet">du Buffet</span></h1>
-    <img class="hero-logo" src="assets/images/logo.png" alt="Le Myst&#232;re du Buffet">
+
     <div class="hero-btns">
       <a href="pages/contact.html" class="btn btn-o" style="background:#0a4a8c;border-color:#0a4a8c" data-fr="R&#233;server une Table" data-en="Book a Table">R&#233;server une Table</a>
     </div>
